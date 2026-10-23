@@ -1,0 +1,32 @@
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  vars: {ansible_python_interpreter: /private/tmp/claude-501/ans/bin/python}
+  tasks:
+    - name: deploy with rollback
+      block:
+        - ansible.builtin.debug: {msg: "1 apply new config"}
+        - ansible.builtin.command: /usr/bin/false
+          name: 2 health check (fails)
+        - ansible.builtin.debug: {msg: "3 never reached"}
+      rescue:
+        - ansible.builtin.debug: {msg: "R rollback; failed task was '{{ ansible_failed_task.name }}' rc={{ ansible_failed_result.rc }}"}
+      always:
+        - ansible.builtin.debug: {msg: "A always: cleanup"}
+    - ansible.builtin.debug: {msg: "play continues after rescue"}
+    - name: ignore_errors vs failed_when
+      ansible.builtin.command: sh -c 'echo warn >&2; exit 3'
+      register: r
+      failed_when: r.rc not in [0, 3]
+      changed_when: false
+    - ansible.builtin.debug: {msg: "rc=3 treated as success; stderr={{ r.stderr }}"}
+    - name: block-level when
+      block:
+        - ansible.builtin.debug: {msg: "only when true"}
+      when: false
+    - name: rescue that fails again
+      block:
+        - ansible.builtin.fail: {msg: first}
+      rescue:
+        - ansible.builtin.fail: {msg: second}
+      ignore_errors: true

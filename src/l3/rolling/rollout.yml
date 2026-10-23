@@ -1,0 +1,34 @@
+# Simulated rolling update. Each "server" is a directory <sandbox>/<host>/ holding: version, in_rotation, and a log of events.
+- name: Rolling update
+  hosts: app
+  gather_facts: false
+  serial: "{{ batches | default([1, '50%', '100%']) }}"
+  any_errors_fatal: true      # NOT max_fail_percentage: with a block that has an `always:` section it did not stop later batches on ansible-core 2.21.5 (see abort_semantics.yml)
+  vars:
+    root: "{{ sandbox }}/{{ inventory_hostname }}"
+    new_version: "2.0"
+    bad_hosts: []
+  tasks:
+    - name: Rollout block
+      block:
+        - name: Drain (remove from rotation)
+          ansible.builtin.file: {path: "{{ root }}/in_rotation", state: absent}
+        - name: Log drain
+          ansible.builtin.lineinfile: {path: "{{ root }}/events.log", line: "drained", create: true, mode: "0644"}
+        - name: Install new version
+          ansible.builtin.copy: {dest: "{{ root }}/version", content: "{{ new_version }}\n", mode: "0644"}
+        - name: Smoke test
+          ansible.builtin.assert:
+            that: inventory_hostname not in bad_hosts
+            fail_msg: "smoke test failed on {{ inventory_hostname }}"
+            quiet: true
+      rescue:
+        - name: Roll back to previous version
+          ansible.builtin.copy: {dest: "{{ root }}/version", content: "{{ previous_version | default('1.0') }}\n", mode: "0644"}
+        - name: Log rollback
+          ansible.builtin.lineinfile: {path: "{{ root }}/events.log", line: "rolled back", create: true, mode: "0644"}
+        - name: Fail the host so the batch is marked failed
+          ansible.builtin.fail: {msg: "rolled back {{ inventory_hostname }}"}
+      always:
+        - name: Return to rotation
+          ansible.builtin.file: {path: "{{ root }}/in_rotation", state: touch, mode: "0644", modification_time: preserve, access_time: preserve}

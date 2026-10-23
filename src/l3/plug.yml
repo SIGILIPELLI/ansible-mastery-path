@@ -1,0 +1,16 @@
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  vars: {ansible_python_interpreter: /private/tmp/claude-501/ans/bin/python}
+  tasks:
+    - ansible.builtin.debug:
+        msg:
+          sizes: "{{ [0, 1023, 1024, 1536, 5368709120] | map('human_bytes') | list }}"
+          kv: "{{ 'a=1\n# c\nb = two' | kv_to_dict }}"
+          masked: "{{ {'user': 'u', 'db_password': 'p', 'nested': {'api_token': 't', 'ok': 1}} | mask_secrets }}"
+          env: "{{ lookup('envfile', 'DB_HOST', 'DB_PASS', file='app.env') }}"
+          env_default: "{{ lookup('envfile', 'NOPE', file='app.env', default='fallback') }}"
+    - ansible.builtin.debug: {msg: "{{ -5 | human_bytes }}"}
+      ignore_errors: true
+    - ansible.builtin.debug: {msg: "{{ lookup('envfile', 'NOPE', file='app.env') }}"}
+      ignore_errors: true

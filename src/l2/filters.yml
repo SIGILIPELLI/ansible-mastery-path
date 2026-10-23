@@ -1,0 +1,33 @@
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  vars:
+    ansible_python_interpreter: /private/tmp/claude-501/ans/bin/python
+    servers: [{name: a, port: 80, tags: [x, y]}, {name: b, port: 8080, tags: [y]}, {name: c, port: 443, tags: []}]
+    base: {a: 1, b: {c: 2, d: 3}}
+    over: {b: {c: 9}, e: 5}
+    csv: "web1, web2 ,db1"
+  tasks:
+    - ansible.builtin.debug:
+        msg:
+          names: "{{ servers | map(attribute='name') | list }}"
+          joined: "{{ servers | map(attribute='name') | join(',') }}"
+          high_ports: "{{ servers | selectattr('port', 'gt', 100) | map(attribute='name') | list }}"
+          untagged: "{{ servers | rejectattr('tags') | map(attribute='name') | list }}"
+          by_name: "{{ dict(servers | map(attribute='name') | zip(servers | map(attribute='port'))) }}"
+          combine_shallow: "{{ base | combine(over) }}"
+          combine_deep: "{{ base | combine(over, recursive=True) }}"
+          items: "{{ base | dict2items | map(attribute='key') | list }}"
+          split_strip: "{{ csv.split(',') | map('trim') | list }}"
+          regex: "{{ 'web-01.example.com' | regex_replace('^(\\w+)-(\\d+).*', '\\2:\\1') }}"
+          default_empty: "{{ '' | default('x') }} / {{ '' | default('x', true) }}"
+          ints: "{{ '8080' | int + 1 }} {{ 'abc' | int(-1) }}"
+          unique_flat: "{{ servers | map(attribute='tags') | flatten | unique | sort }}"
+          json: "{{ base | to_json }}"
+          mandatory_ok: "{{ base.a | mandatory }}"
+    - ansible.builtin.debug: {msg: "{{ base | to_nice_yaml }}"}
+    - ansible.builtin.debug: {msg: "{{ undefined_thing | mandatory('need undefined_thing') }}"}
+      ignore_errors: true
+    - ansible.builtin.debug: {msg: "{{ '10.0.0.5' is ansible.utils.ip }}"}
+      ignore_errors: true
+    - ansible.builtin.debug: {msg: "{{ 'x' ~ 3 }} {{ [1,2,3] | sum }} {{ 7 // 2 }} {{ 'a' if 3 > 2 else 'b' }}"}

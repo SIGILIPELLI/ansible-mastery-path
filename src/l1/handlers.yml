@@ -1,0 +1,17 @@
+- hosts: web1
+  gather_facts: false
+  vars:
+    out: /private/tmp/claude-501/an/l1/web
+    upstreams: [{name: a, weight: 3}, {name: b}]
+  tasks:
+    - name: ensure dir
+      ansible.builtin.file: {path: "{{ out }}", state: directory}
+    - name: render config
+      ansible.builtin.template: {src: templates/nginx.conf.j2, dest: "{{ out }}/site.conf"}
+      notify: reload service
+    - name: second notifier of same handler
+      ansible.builtin.copy: {dest: "{{ out }}/extra.conf", content: "x=1\n"}
+      notify: reload service
+  handlers:
+    - name: reload service
+      ansible.builtin.debug: {msg: "RELOAD happened"}

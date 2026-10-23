@@ -1,0 +1,7 @@
+- hosts: all
+  gather_facts: "{{ gf | default(false) }}"
+  tasks:
+    - ansible.builtin.command: sleep 1
+      changed_when: false
+    - ansible.builtin.command: sleep 1
+      changed_when: false

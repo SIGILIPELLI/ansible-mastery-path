@@ -1,0 +1,10 @@
+---
+- name: Example
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Create directory
+      ansible.builtin.file:
+        path: /tmp/foo
+        state: directory
+        mode: "0755"

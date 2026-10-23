@@ -1,0 +1,12 @@
+- hosts: all
+  gather_facts: false
+  tasks:
+    - ansible.builtin.debug: {msg: "install"}
+      tags: [install, setup]
+    - ansible.builtin.debug: {msg: "configure"}
+      tags: [configure, setup]
+    - ansible.builtin.debug: {msg: "always runs"}
+      tags: [always]
+    - ansible.builtin.debug: {msg: "never unless asked"}
+      tags: [never, debug_only]
+    - ansible.builtin.debug: {msg: "untagged"}

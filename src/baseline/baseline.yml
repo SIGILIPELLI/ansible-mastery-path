@@ -1,0 +1,56 @@
+# Configures a SIMULATED server: everything lives under {{ root }}/<hostname>/ so it is safe to run on a laptop.
+- hosts: servers
+  gather_facts: false
+  vars:
+    root: "{{ sandbox | default('/tmp/ansible-baseline') }}"
+    node_root: "{{ root }}/{{ inventory_hostname }}"
+    app_user: appsvc
+    motd_text: "Managed by Ansible. Changes made by hand will be reverted."
+  tasks:
+    - name: directory tree
+      ansible.builtin.file:
+        path: "{{ node_root }}/{{ item.path }}"
+        state: directory
+        mode: "{{ item.mode }}"
+      loop:
+        - {path: etc/app, mode: "0755"}
+        - {path: var/log/app, mode: "0750"}
+        - {path: var/lib/app, mode: "0700"}
+      loop_control: {label: "{{ item.path }}"}
+
+    - name: message of the day
+      ansible.builtin.copy:
+        dest: "{{ node_root }}/etc/motd"
+        content: "{{ motd_text }}\n"
+        mode: "0644"
+
+    - name: app configuration
+      ansible.builtin.template:
+        src: app.conf.j2
+        dest: "{{ node_root }}/etc/app/app.conf"
+        mode: "0640"
+      notify: restart app
+
+    - name: ensure a hardening line in sshd config copy
+      ansible.builtin.lineinfile:
+        path: "{{ node_root }}/etc/sshd_config"
+        line: "PermitRootLogin no"
+        regexp: '^#?PermitRootLogin'
+        create: true
+        mode: "0600"
+
+    - name: managed block of kernel-style settings
+      ansible.builtin.blockinfile:
+        path: "{{ node_root }}/etc/sysctl.conf"
+        create: true
+        mode: "0644"
+        block: |
+          net.core.somaxconn = 1024
+          vm.swappiness = 10
+
+  handlers:
+    - name: restart app
+      ansible.builtin.copy:
+        dest: "{{ node_root }}/var/lib/app/restart.count"
+        content: "{{ (lookup('ansible.builtin.file', node_root + '/var/lib/app/restart.count', errors='ignore') | default(0) | int) + 1 }}\n"
+        mode: "0600"

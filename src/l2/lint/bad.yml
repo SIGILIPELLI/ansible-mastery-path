@@ -1,0 +1,8 @@
+- hosts: all
+  tasks:
+    - shell: echo hello > /tmp/x
+    - name: copy file
+      copy: src=a dest=/tmp/a mode=0644
+    - command: mkdir /tmp/foo
+    - name: Ensure latest
+      package: name=foo state=latest

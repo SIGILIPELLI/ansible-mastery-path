@@ -1,0 +1,109 @@
+site_name: Ansible Mastery Path
+site_description: "A free Ansible course: inventory, playbooks, idempotency, roles, variables, vault, custom modules, rolling updates, testing and running automation at scale."
+site_url: https://sigilipelli.github.io/ansible-mastery-path/
+repo_url: https://github.com/sigilipelli/ansible-mastery-path
+repo_name: ansible-mastery-path
+
+theme:
+  name: material
+  favicon: assets/favicon.svg
+  custom_dir: docs/overrides
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep orange
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep orange
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    - content.code.copy
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/progress-tracker.css
+
+extra_javascript:
+  - javascripts/progress-tracker.js
+
+nav:
+  - Home: index.md
+  - Privacy Policy: privacy.md
+  - License: license.md
+  - "Level 1 · Ansible Foundations":
+      - Overview: level-1/index.md
+      - "01 · What Ansible Is and How It Works": level-1/01-what-ansible-is.md
+      - "02 · Ad-Hoc Commands, Modules and ansible-doc": level-1/02-adhoc-and-docs.md
+      - "03 · Inventory: Hosts, Groups and Variables": level-1/03-inventory.md
+      - "04 · Playbook Anatomy: Plays, Tasks and Modules": level-1/04-playbook-anatomy.md
+      - "05 · Idempotency, Changed and Check Mode": level-1/05-idempotency.md
+      - "06 · Variables and Facts": level-1/06-variables-facts.md
+      - "07 · Conditionals, Loops and Registered Results": level-1/07-conditionals-loops.md
+      - "08 · Templates and Handlers": level-1/08-templates-handlers.md
+      - "09 · Debugging and Reading Failures": level-1/09-debugging-playbooks.md
+      - "10 · Project — A Verified Baseline Playbook": level-1/10-project-baseline-playbook.md
+  - "Level 2 · Structure and Safety":
+      - Overview: level-2/index.md
+      - "01 · Roles: Reusable Structure": level-2/01-roles.md
+      - "02 · Variable Precedence, Measured": level-2/02-variable-precedence.md
+      - "03 · Jinja2 Filters and Expressions": level-2/03-jinja-filters.md
+      - "04 · Blocks, Errors and Rescue": level-2/04-blocks-errors.md
+      - "05 · Ansible Vault and Secrets": level-2/05-vault.md
+      - "06 · Collections, Galaxy and Dependencies": level-2/06-collections.md
+      - "07 · Tags, Limits and Targeting": level-2/07-tags-limits.md
+      - "08 · Delegation, Serial Batches and Strategies": level-2/08-delegation-strategies.md
+      - "09 · Testing and Linting Ansible": level-2/09-testing-ansible.md
+      - "10 · Project — A Tested Role": level-2/10-project-tested-role.md
+  - "Level 3 · Extending Ansible":
+      - Overview: level-3/index.md
+      - "01 · Writing a Custom Module": level-3/01-custom-modules.md
+      - "02 · Filter and Lookup Plugins": level-3/02-filter-plugins.md
+      - "03 · Dynamic Inventory": level-3/03-dynamic-inventory.md
+      - "04 · Command and Shell Without Breaking Idempotency": level-3/04-command-shell-pitfalls.md
+      - "05 · Async Tasks and Polling": level-3/05-async-polling.md
+      - "06 · Performance: Forks, Pipelining and Facts": level-3/06-performance.md
+      - "07 · Rolling Updates and Failure Budgets": level-3/07-rolling-updates.md
+      - "08 · State, Drift and Convergence": level-3/08-state-and-drift.md
+      - "09 · Network and Windows Targets": level-3/09-network-windows.md
+      - "10 · Project — A Tested Custom Module": level-3/10-project-custom-module.md
+  - "Level 4 · Operating Ansible":
+      - Overview: level-4/index.md
+      - "01 · Controllers, AWX and Execution Environments": level-4/01-automation-platform.md
+      - "02 · Ansible in CI/CD": level-4/02-ansible-in-ci.md
+      - "03 · Secrets and Credentials at Scale": level-4/03-secrets-at-scale.md
+      - "04 · Pull Mode and Bootstrap": level-4/04-pull-mode.md
+      - "05 · Terraform and Ansible Together": level-4/05-terraform-and-ansible.md
+      - "06 · Auditing Drift with Check Mode": level-4/06-drift-audit.md
+      - "07 · Automation Incidents and Blast Radius": level-4/07-incidents.md
+      - "08 · Migrating Scripts and Avoiding Anti-Patterns": level-4/08-migration-antipatterns.md
+      - "09 · Governance, Review and Standards": level-4/09-governance.md
+      - "10 · Capstone — Managing a Simulated Fleet": level-4/10-capstone-fleet.md

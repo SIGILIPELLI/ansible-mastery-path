@@ -1,0 +1,28 @@
+# Measures when later serial batches are skipped after a failure. Variable `mode` selects the failure-handling shape.
+- hosts: app
+  gather_facts: false
+  serial: [1, "50%", "100%"]
+  max_fail_percentage: "{{ 0 if mode != 'anyfatal' else 100 }}"
+  any_errors_fatal: "{{ mode == 'anyfatal' }}"
+  tasks:
+    - block:
+        - ansible.builtin.debug: {msg: "start on {{ inventory_hostname }}"}
+        - ansible.builtin.fail: {msg: x}
+          when: inventory_hostname == 'n3'
+      rescue:
+        - ansible.builtin.fail: {msg: y}
+      always:
+        - ansible.builtin.debug: {msg: "always on {{ inventory_hostname }}"}
+      when: mode in ['rescue_always', 'anyfatal']
+    - block:
+        - ansible.builtin.debug: {msg: "start on {{ inventory_hostname }}"}
+        - ansible.builtin.fail: {msg: x}
+          when: inventory_hostname == 'n3'
+      always:
+        - ansible.builtin.debug: {msg: "always on {{ inventory_hostname }}"}
+      when: mode == 'always_only'
+    - block:
+        - ansible.builtin.debug: {msg: "start on {{ inventory_hostname }}"}
+        - ansible.builtin.fail: {msg: x}
+          when: inventory_hostname == 'n3'
+      when: mode == 'plain'

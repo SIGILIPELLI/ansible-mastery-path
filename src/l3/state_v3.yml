@@ -1,0 +1,13 @@
+# v3: explicit removal + allow-list purge of unmanaged files
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  vars: {ansible_python_interpreter: /private/tmp/claude-501/ans/bin/python, d: /private/tmp/claude-501/an/l3d, managed: [a.conf]}
+  tasks:
+    - ansible.builtin.copy: {dest: "{{ d }}/a.conf", content: "a\n"}
+    - ansible.builtin.find: {paths: "{{ d }}", patterns: "*.conf"}
+      register: found
+    - ansible.builtin.file: {path: "{{ item.path }}", state: absent}
+      loop: "{{ found.files }}"
+      loop_control: {label: "{{ item.path | basename }}"}
+      when: item.path | basename not in managed

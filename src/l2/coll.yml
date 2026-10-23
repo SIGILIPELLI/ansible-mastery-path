@@ -1,0 +1,9 @@
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  vars: {ansible_python_interpreter: /private/tmp/claude-501/ans/bin/python}
+  tasks:
+    - ansible.builtin.debug:
+        msg: "{{ '10.0.0.5' is ansible.utils.ip }} {{ '10.0.0.5/24' | ansible.utils.ipaddr('network') }} {{ '10.0.0.5/24' | ansible.utils.ipaddr('netmask') }}"
+    - ansible.builtin.debug: {msg: "{{ 'x' | ansible.utils.nonexistent }}"}
+      ignore_errors: true

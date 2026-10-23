@@ -1,0 +1,4 @@
+- hosts: web1
+  gather_facts: false
+  tasks:
+    - ansible.builtin.debug: {msg: "{{ not_defined }}"}

@@ -1,0 +1,3 @@
+---
+- name: Reload webapp
+  ansible.builtin.debug: {msg: "reloading webapp on {{ inventory_hostname }}"}

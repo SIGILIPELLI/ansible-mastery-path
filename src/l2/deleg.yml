@@ -1,0 +1,17 @@
+- hosts: app
+  gather_facts: false
+  tasks:
+    - name: run_once picks the first host
+      ansible.builtin.debug: {msg: "run_once ran for {{ inventory_hostname }}"}
+      run_once: true
+    - name: delegate to n4 on behalf of each host
+      ansible.builtin.command: echo "registering {{ inventory_hostname }} from $(basename $PWD)"
+      delegate_to: n4
+      changed_when: false
+      register: d
+    - ansible.builtin.debug: {msg: "{{ d.stdout }}"}
+      run_once: true
+    - name: run_once result visible to all
+      ansible.builtin.set_fact: {token: "{{ lookup('pipe', 'echo tok$$') }}"}
+      run_once: true
+    - ansible.builtin.debug: {msg: "{{ inventory_hostname }} token={{ token | default('UNSET') }}"}

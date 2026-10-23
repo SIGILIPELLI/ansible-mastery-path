@@ -1,0 +1,22 @@
+---
+- name: Validate inputs
+  ansible.builtin.assert:
+    that:
+      - webapp_port | int > 0
+      - webapp_port | int < 65536
+      - webapp_workers | int >= 1
+    fail_msg: "webapp_port must be 1-65535 and webapp_workers >= 1"
+    quiet: true
+
+- name: Create directory
+  ansible.builtin.file:
+    path: "{{ webapp_root }}"
+    state: directory
+    mode: "0755"
+
+- name: Render config
+  ansible.builtin.template:
+    src: webapp.conf.j2
+    dest: "{{ webapp_root }}/webapp.conf"
+    mode: "{{ webapp_config_mode }}"
+  notify: Reload webapp

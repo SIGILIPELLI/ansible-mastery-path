@@ -1,0 +1,16 @@
+- hosts: localhost
+  gather_facts: false
+  vars: {f: /private/tmp/claude-501/an/l3/app.conf}
+  tasks:
+    - ansible.builtin.file: {path: /private/tmp/claude-501/an/l3, state: directory}
+    - ansible.builtin.copy: {dest: "{{ f }}", content: "# header\nport=80\n", force: false}
+    - {name: hash, filehash: {path: "{{ f }}", algorithm: sha1}, register: h}
+    - ansible.builtin.debug: {msg: "{{ h.digest }} {{ h.size }}"}
+    - {name: set workers, kvfile: {path: "{{ f }}", key: workers, value: "4", mode: "0640"}, register: r1}
+    - {name: set again, kvfile: {path: "{{ f }}", key: workers, value: "4", mode: "0640"}, register: r2}
+    - {name: change value, kvfile: {path: "{{ f }}", key: workers, value: "8"}, register: r3}
+    - {name: remove, kvfile: {path: "{{ f }}", key: workers, state: absent}, register: r4}
+    - ansible.builtin.debug: {msg: "changed: {{ [r1.changed, r2.changed, r3.changed, r4.changed] }} r3 before/after={{ r3.before }}/{{ r3.after }}"}
+    - {name: bad key, kvfile: {path: "{{ f }}", key: "bad key", value: x}, ignore_errors: true}
+    - {name: missing value, kvfile: {path: "{{ f }}", key: k}, ignore_errors: true}
+    - {name: missing file, kvfile: {path: /private/tmp/claude-501/an/l3/nofile, key: k, value: v}, ignore_errors: true}

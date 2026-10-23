@@ -1,0 +1,5 @@
+- hosts: app
+  gather_facts: false
+  tasks:
+    - ansible.builtin.debug: {msg: "limit={{ ansible_limit | default('UNDEFINED') }} run_tags={{ ansible_run_tags }} skip_tags={{ ansible_skip_tags }} check={{ ansible_check_mode }}"}
+      run_once: true

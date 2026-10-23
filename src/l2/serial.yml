@@ -1,0 +1,12 @@
+- hosts: app
+  gather_facts: false
+  serial: "{{ batch | default(2) }}"
+  max_fail_percentage: "{{ mfp | default(0) }}"
+  tasks:
+    - name: step A
+      ansible.builtin.debug: {msg: "A on {{ inventory_hostname }}"}
+    - name: maybe fail
+      ansible.builtin.command: /usr/bin/false
+      when: inventory_hostname in (failing | default([]))
+    - name: step B
+      ansible.builtin.debug: {msg: "B on {{ inventory_hostname }}"}

@@ -1,0 +1,12 @@
+- hosts: web1
+  gather_facts: false
+  vars:
+    greeting: "from play vars"
+    cfg: {a: 1, b: {c: 2}}
+  vars_files: []
+  tasks:
+    - ansible.builtin.debug: {msg: "{{ greeting }} / {{ http_port }} / {{ env }}"}
+    - ansible.builtin.set_fact: {greeting: "set by set_fact"}
+    - ansible.builtin.debug: {msg: "{{ greeting }}"}
+    - ansible.builtin.debug: {msg: "cfg.b.c={{ cfg.b.c }} cfg['a']={{ cfg['a'] }} default={{ missing | default('fallback') }}"}
+    - ansible.builtin.debug: {msg: "magic: host={{ inventory_hostname }} groups={{ group_names }} in_web={{ groups['web'] }} play_hosts={{ ansible_play_hosts }}"}

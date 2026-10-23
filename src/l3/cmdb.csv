@@ -1,0 +1,5 @@
+name,address,role,env,port
+web-01,10.0.1.11,web,prod,8080
+web-02,10.0.1.12,web,prod,8080
+db-01,10.0.2.21,db,prod,5432
+web-stg,10.1.1.11,web,staging,8081

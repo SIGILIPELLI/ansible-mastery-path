@@ -1,0 +1,3 @@
+---
+# internal constants (high precedence: not meant to be overridden)
+webapp_config_mode: "0644"

@@ -1,0 +1,4 @@
+---
+webapp_port: 8080
+webapp_root: "/private/tmp/claude-501/an/l2/webapp/{{ inventory_hostname }}"
+webapp_workers: 2

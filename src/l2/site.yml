@@ -1,0 +1,5 @@
+- hosts: web
+  gather_facts: false
+  roles:
+    - role: webapp
+      vars: {webapp_workers: 4}

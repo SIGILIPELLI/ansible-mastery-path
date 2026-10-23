@@ -1,0 +1,61 @@
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  vars: {ansible_python_interpreter: /private/tmp/claude-501/ans/bin/python, d: /private/tmp/claude-501/an/l3c}
+  tasks:
+    - name: command does not use a shell (no pipe, no $VAR expansion)
+      ansible.builtin.command: echo $HOME | wc -c
+      register: c1
+      changed_when: false
+    - ansible.builtin.debug: {msg: "command stdout={{ c1.stdout }}"}
+    - name: shell does
+      ansible.builtin.shell: echo $HOME | wc -c
+      register: s1
+      changed_when: false
+    - ansible.builtin.debug: {msg: "shell stdout is a number: {{ s1.stdout | trim | int > 0 }}"}
+    - name: pipeline failure hidden without pipefail
+      ansible.builtin.shell: false | cat
+      register: p1
+      changed_when: false
+    - ansible.builtin.debug: {msg: "false | cat -> rc={{ p1.rc }} (the failure is invisible)"}
+    - name: with pipefail (bash)
+      ansible.builtin.shell: set -o pipefail; false | cat
+      args: {executable: /bin/bash}
+      register: p2
+      failed_when: false
+      changed_when: false
+    - ansible.builtin.debug: {msg: "with pipefail rc={{ p2.rc }}"}
+    - name: injection through a variable in shell
+      ansible.builtin.shell: echo {{ evil }}
+      vars: {evil: "ok; echo INJECTED"}
+      register: inj
+      changed_when: false
+    - ansible.builtin.debug: {msg: "{{ inj.stdout_lines }}"}
+    - name: quoted with the quote filter
+      ansible.builtin.shell: echo {{ evil | quote }}
+      vars: {evil: "ok; echo INJECTED"}
+      register: inj2
+      changed_when: false
+    - ansible.builtin.debug: {msg: "{{ inj2.stdout_lines }}"}
+    - name: argv form avoids quoting problems
+      ansible.builtin.command:
+        argv: [echo, "a b", "c;d"]
+      register: av
+      changed_when: false
+    - ansible.builtin.debug: {msg: "{{ av.stdout }}"}
+    - name: creates makes command idempotent
+      ansible.builtin.command: {cmd: "touch {{ d }}/made", creates: "{{ d }}/made"}
+      register: cr
+    - name: removes
+      ansible.builtin.command: {cmd: "rm {{ d }}/made", removes: "{{ d }}/made"}
+      register: rm1
+    - ansible.builtin.debug: {msg: "creates->changed={{ cr.changed }} removes->changed={{ rm1.changed }}"}
+    - name: stat then act instead
+      ansible.builtin.stat: {path: "{{ d }}/made"}
+      register: st
+    - ansible.builtin.debug: {msg: "exists after remove: {{ st.stat.exists }}"}
+    - name: stdout parse for changed
+      ansible.builtin.shell: "test -f {{ d }}/flag && echo unchanged || { touch {{ d }}/flag; echo created; }"
+      register: ch
+      changed_when: "'created' in ch.stdout"
+    - ansible.builtin.debug: {msg: "changed={{ ch.changed }}"}

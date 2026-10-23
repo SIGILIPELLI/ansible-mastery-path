@@ -1,0 +1,7 @@
+- hosts: app
+  gather_facts: false
+  strategy: "{{ strat }}"
+  tasks:
+    - ansible.builtin.command: sleep {{ 2 if inventory_hostname == 'n1' else 0 }}
+      changed_when: false
+    - ansible.builtin.debug: {msg: "second task on {{ inventory_hostname }} at {{ lookup('pipe','date +%S') }}"}

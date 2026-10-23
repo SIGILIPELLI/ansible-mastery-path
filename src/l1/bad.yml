@@ -1,0 +1,4 @@
+- hosts: web1
+  tasks:
+    - debug: msg=hi
+   - debug: msg=bad

@@ -1,0 +1,6 @@
+- hosts: all
+  gather_facts: true
+  gather_subset: "{{ subset | default('all') }}"
+  tasks:
+    - ansible.builtin.debug: {msg: "ok"}
+      run_once: true

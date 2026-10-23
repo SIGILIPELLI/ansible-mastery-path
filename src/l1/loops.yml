@@ -1,0 +1,34 @@
+- hosts: web1
+  gather_facts: true
+  vars:
+    users: [{name: ann, admin: true}, {name: bob, admin: false}, {name: cy, admin: true}]
+  tasks:
+    - name: facts we use
+      ansible.builtin.debug:
+        msg: "os_family={{ ansible_facts.os_family }} cpus={{ ansible_facts.processor_vcpus | default('n/a') }} py={{ ansible_facts.python_version }}"
+    - name: loop with when
+      ansible.builtin.debug: {msg: "{{ item.name }} is admin"}
+      loop: "{{ users }}"
+      loop_control: {label: "{{ item.name }}"}
+      when: item.admin
+    - name: only on Debian family
+      ansible.builtin.debug: {msg: "apt would run"}
+      when: ansible_facts.os_family == "Debian"
+    - name: register a result
+      ansible.builtin.command: echo {{ item }}
+      loop: [one, two]
+      register: res
+      changed_when: false
+    - name: inspect register
+      ansible.builtin.debug: {msg: "{{ res.results | map(attribute='stdout') | list }} first_rc={{ res.results[0].rc }}"}
+    - name: when on a string that looks like a bool
+      ansible.builtin.debug: {msg: "ran"}
+      when: flag | bool
+      vars: {flag: "false"}
+    - name: retries with until
+      ansible.builtin.command: "test -f /private/tmp/claude-501/an/l1/never"
+      register: r
+      until: r.rc == 0
+      retries: 2
+      delay: 1
+      ignore_errors: true

@@ -1,0 +1,8 @@
+# managed by Ansible - do not edit by hand
+server {
+    listen {{ http_port }};
+    server_name {{ inventory_hostname }}{% if env == 'production' %}.example.com{% endif %};
+{% for u in upstreams %}
+    # upstream {{ loop.index }}: {{ u.name }} weight={{ u.weight | default(1) }}
+{% endfor %}
+}

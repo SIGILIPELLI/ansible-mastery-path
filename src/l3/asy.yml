@@ -1,0 +1,30 @@
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  vars: {ansible_python_interpreter: /private/tmp/claude-501/ans/bin/python}
+  tasks:
+    - name: fire and forget style (poll 0)
+      ansible.builtin.command: sleep 3
+      async: 10
+      poll: 0
+      register: job
+      changed_when: false
+    - ansible.builtin.debug: {msg: "started job {{ job.ansible_job_id }} finished={{ job.finished | default('n/a') }}"}
+    - name: other work meanwhile
+      ansible.builtin.command: echo working
+      changed_when: false
+    - name: poll with async_status
+      ansible.builtin.async_status: {jid: "{{ job.ansible_job_id }}"}
+      register: res
+      until: res.finished
+      retries: 6
+      delay: 1
+    - ansible.builtin.debug: {msg: "finished={{ res.finished }} rc={{ res.rc }} attempts={{ res.attempts }}"}
+    - name: timeout shorter than the job
+      ansible.builtin.command: sleep 5
+      async: 1
+      poll: 1
+      ignore_errors: true
+      register: to
+      changed_when: false
+    - ansible.builtin.debug: {msg: "timed out: failed={{ to.failed }} msg={{ to.msg | default('') }}"}

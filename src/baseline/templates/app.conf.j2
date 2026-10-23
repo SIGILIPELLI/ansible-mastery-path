@@ -1,0 +1,5 @@
+# managed by Ansible
+host = {{ inventory_hostname }}
+port = {{ app_port }}
+log_dir = {{ node_root }}/var/log/app
+workers = {{ workers | default(2) }}

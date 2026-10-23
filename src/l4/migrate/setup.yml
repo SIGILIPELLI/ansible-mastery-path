@@ -1,0 +1,8 @@
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  vars: {ansible_python_interpreter: /private/tmp/claude-501/ans/bin/python}
+  tasks:
+    - ansible.builtin.file: {path: "{{ d }}/logs", state: directory, mode: "0755"}
+    - ansible.builtin.lineinfile: {path: "{{ d }}/app.conf", line: "port=8080", regexp: "^port=", create: true, mode: "0600"}
+    - ansible.builtin.lineinfile: {path: "{{ d }}/users.log", line: "created user", create: true, mode: "0644"}

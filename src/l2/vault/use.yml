@@ -1,0 +1,16 @@
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  vars_files: [a.yml]
+  vars: {ansible_python_interpreter: /private/tmp/claude-501/ans/bin/python}
+  tasks:
+    - name: leaks without no_log
+      ansible.builtin.debug: {msg: "pw={{ db_password }}"}
+    - name: write secret file
+      ansible.builtin.copy: {dest: /private/tmp/claude-501/an/l2/pw.txt, content: "{{ db_password }}\n", mode: "0600"}
+      no_log: true
+    - name: failing task with no_log
+      ansible.builtin.command: "false {{ db_password }}"
+      no_log: true
+    - name: failing without no_log
+      ansible.builtin.command: "false {{ db_password }}"

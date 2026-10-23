@@ -1,0 +1,9 @@
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  vars: {ansible_python_interpreter: /private/tmp/claude-501/ans/bin/python, d: /private/tmp/claude-501/an/l3d}
+  tasks:
+    - name: team A sets the mode
+      ansible.builtin.file: {path: "{{ d }}/shared.conf", state: touch, mode: "0600", modification_time: preserve, access_time: preserve}
+    - name: team B (another role) sets the mode too
+      ansible.builtin.file: {path: "{{ d }}/shared.conf", state: touch, mode: "0644", modification_time: preserve, access_time: preserve}

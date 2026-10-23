@@ -1,0 +1,7 @@
+- hosts: web1
+  gather_facts: false
+  tasks:
+    - ansible.builtin.assert:
+        that: ["http_port | int < 1024"]
+        fail_msg: "http_port {{ http_port }} needs root"
+        success_msg: ok

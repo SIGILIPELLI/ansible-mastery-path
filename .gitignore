@@ -1,0 +1,7 @@
+site/
+.venv/
+.pytest_cache/
+__pycache__/
+.ansible_home/
+collections/
+.ansible/

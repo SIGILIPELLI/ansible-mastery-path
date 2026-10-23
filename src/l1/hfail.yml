@@ -1,0 +1,11 @@
+- hosts: web1
+  gather_facts: false
+  tasks:
+    - name: change something
+      ansible.builtin.copy: {dest: /private/tmp/claude-501/an/l1/hf.txt, content: "{{ lookup('pipe','date +%N') }}\n"}
+      notify: h
+    - name: boom
+      ansible.builtin.command: /usr/bin/false
+  handlers:
+    - name: h
+      ansible.builtin.debug: {msg: HANDLER RAN}

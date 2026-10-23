@@ -1,0 +1,7 @@
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  vars: {ansible_python_interpreter: /private/tmp/claude-501/ans/bin/python, d: /private/tmp/claude-501/an/l3d}
+  tasks:
+    - ansible.builtin.copy: {dest: "{{ d }}/a.conf", content: "a\n"}
+    - ansible.builtin.copy: {dest: "{{ d }}/legacy.conf", content: "legacy\n"}
