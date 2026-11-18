@@ -1,6 +1,6 @@
 site_name: Ansible Mastery Path
 site_description: "A free Ansible course: inventory, playbooks, idempotency, roles, variables, vault, custom modules, rolling updates, testing and running automation at scale."
-site_url: https://sigilipelli.github.io/ansible-mastery-path/
+site_url: https://learnmasterypath.com/ansible-mastery-path/
 repo_url: https://github.com/sigilipelli/ansible-mastery-path
 repo_name: ansible-mastery-path
 
