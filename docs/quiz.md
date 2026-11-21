@@ -243,7 +243,7 @@ TEMPLATE = """# TODO: write the Jinja2 template: managed-by header, listen port,
 """
 vars_ = {"http_port": 8081, "inventory_hostname": "web1", "env": "staging",
          "upstreams": [{"name": "a", "weight": 3}, {"name": "b"}]}
-print(env.from_string(TEMPLATE).render(**vars_), end="")
+print(env.from_string(TEMPLATE).render(**vars_))
 vars_["env"] = "production"
 print(env.from_string(TEMPLATE).render(**vars_).splitlines()[3])
 ```
@@ -276,7 +276,7 @@ server {
 &quot;&quot;&quot;
 vars_ = {&quot;http_port&quot;: 8081, &quot;inventory_hostname&quot;: &quot;web1&quot;, &quot;env&quot;: &quot;staging&quot;,
          &quot;upstreams&quot;: [{&quot;name&quot;: &quot;a&quot;, &quot;weight&quot;: 3}, {&quot;name&quot;: &quot;b&quot;}]}
-print(env.from_string(TEMPLATE).render(**vars_), end=&quot;&quot;)
+print(env.from_string(TEMPLATE).render(**vars_))
 vars_[&quot;env&quot;] = &quot;production&quot;
 print(env.from_string(TEMPLATE).render(**vars_).splitlines()[3])
 </code></pre>
