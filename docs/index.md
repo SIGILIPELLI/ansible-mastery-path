@@ -5,26 +5,6 @@ description: "Free Ansible course: 40 lessons on inventory, playbooks, idempoten
 
 # Ansible Mastery Path
 
-<div class="mp-hero-lockup">
-  <div class="mp-hero-globe">
-    <svg viewBox="0 0 160 160" class="mp-globe-svg mp-mark">
-      <circle cx="80" cy="80" r="74" fill="var(--md-default-bg-color, #FAF7EF)" stroke="#2FA98D" stroke-width="5"/>
-      <rect class="mp-bar mp-bar-1" x="36" y="90" width="17" height="24" rx="5" fill="#2FA98D"/>
-      <rect class="mp-bar mp-bar-2" x="59" y="74" width="17" height="40" rx="5" fill="#7FC9B7"/>
-      <rect class="mp-bar mp-bar-3" x="82" y="56" width="17" height="58" rx="5" fill="#E0B457"/>
-      <rect class="mp-bar mp-bar-4" x="105" y="38" width="17" height="76" rx="5" fill="#C97B4A"/>
-      <circle class="mp-dot" cx="44.5" cy="82" r="7" fill="#22261f"/>
-    </svg>
-  </div>
-  <div class="mp-hero-divider"></div>
-  <div class="mp-hero-text">
-    <div class="mp-hero-title">Mastery Path</div>
-    <div class="mp-hero-sub">BOOTCAMP</div>
-    <div class="mp-hero-rule"></div>
-    <div class="mp-hero-byline">VINOD BHANUJA</div>
-  </div>
-</div>
-
 Most Ansible problems are not exotic. A playbook that is green because it never changed anything. A `command` task that reports changed on every run. A removed task that leaves the old configuration on every server. Two roles that fight over one file and never converge. A `--limit` that matches nothing and exits zero. A rolling update whose failure budget silently stops working. None of these are bugs in the tool. They follow from how Ansible actually works, and this course shows each one, with an experiment or a test wherever it could be run.
 
 It assumes you can use a terminal and edit YAML. It doesn't assume any automation experience.
