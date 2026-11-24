@@ -1,0 +1,3881 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A free Ansible cheat sheet: 21 quick-reference tables from every level of the Ansible Mastery Path, each linked to its full lesson.">
+      
+      
+      
+        <link rel="canonical" href="https://learnmasterypath.com/ansible-mastery-path/cheat-sheet/">
+      
+      
+        <link rel="prev" href="../interview-questions/">
+      
+      
+        <link rel="next" href="../level-1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
+    
+    
+  
+  <title>Ansible Cheat Sheet: Quick Reference, Beginner to Advanced</title>
+
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../stylesheets/progress-tracker.css">
+    
+      <link rel="stylesheet" href="../stylesheets/final-quiz.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-05VBGCXN12"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-05VBGCXN12');
+  </script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mastery Path">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Ansible Cheat Sheet: Quick Reference, Beginner to Advanced">
+  <meta property="og:description" content="A free Ansible cheat sheet: 21 quick-reference tables from every level of the Ansible Mastery Path, each linked to its full lesson.">
+  <meta property="og:url" content="https://learnmasterypath.com/ansible-mastery-path/cheat-sheet/">
+  <meta property="og:image" content="https://learnmasterypath.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mastery Path: free structured courses, beginner to master">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ansible Cheat Sheet: Quick Reference, Beginner to Advanced">
+  <meta name="twitter:description" content="A free Ansible cheat sheet: 21 quick-reference tables from every level of the Ansible Mastery Path, each linked to its full lesson.">
+  <meta name="twitter:image" content="https://learnmasterypath.com/og-image.png">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9440969811959397"
+     crossorigin="anonymous"></script><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Mastery Path", "item": "https://learnmasterypath.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Ansible Mastery Path", "item": "https://learnmasterypath.com/ansible-mastery-path/"},
+      {"@type": "ListItem", "position": 3, "name": "Cheat Sheet", "item": "https://learnmasterypath.com/ansible-mastery-path/cheat-sheet/"}
+    ]
+  }
+  </script>
+  <style>
+    .md-banner a:hover { text-decoration: underline !important; }
+    .mp-related { margin-top: 2.4rem; padding-top: 1rem; border-top: 1px solid var(--md-default-fg-color--lightest); font-size: .78rem; }
+    .mp-related h2 { font-size: .9rem; margin: 0 0 .5rem; }
+    .mp-related ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem .9rem; }
+    .mp-related li { margin: 0 !important; }
+  </style>
+  <script type="application/json" id="mp-course-meta">{"home": false, "id": "ansible-mastery-path", "name": "Ansible Mastery Path", "repo": "https://github.com/sigilipelli/ansible-mastery-path", "src": "cheat-sheet.md", "url": "https://learnmasterypath.com/ansible-mastery-path/"}</script>
+  <link rel="stylesheet" href="https://learnmasterypath.com/assets/learn.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://learnmasterypath.com/assets/course.css?v=1">
+  <script src="https://learnmasterypath.com/assets/learn.js" defer></script>
+  <script src="https://learnmasterypath.com/assets/signup.js" defer></script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ansible-cheat-sheet" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <a href="https://learnmasterypath.com/" style="color: inherit; text-decoration: none;">
+    &larr; Mastery Path &middot; all 100+ free courses
+  </a>
+  <span style="opacity: .6; margin: 0 .6em;">|</span>
+  <a href="https://learnmasterypath.com/search/" style="color: inherit; text-decoration: none;">Search all courses</a>
+  <span style="opacity: .6; margin: 0 .6em;">|</span>
+  <a href="https://learnmasterypath.com/resume/" style="color: inherit; font-weight: 700; text-decoration: none;">
+    Got the skills? Free resume ATS check &rarr;
+  </a>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Ansible Mastery Path" class="md-header__button md-logo" aria-label="Ansible Mastery Path" data-md-component="logo">
+      <svg class="mp-mark" viewBox="0 0 160 160" role="img" aria-label="Mastery Path logo">
+  <circle cx="80" cy="80" r="74" fill="#FAF7EF" stroke="#2FA98D" stroke-width="5"/>
+  <rect class="mp-bar mp-bar-1" x="36" y="90" width="17" height="24" rx="5" fill="#2FA98D"/>
+  <rect class="mp-bar mp-bar-2" x="59" y="74" width="17" height="40" rx="5" fill="#7FC9B7"/>
+  <rect class="mp-bar mp-bar-3" x="82" y="56" width="17" height="58" rx="5" fill="#E0B457"/>
+  <rect class="mp-bar mp-bar-4" x="105" y="38" width="17" height="76" rx="5" fill="#C97B4A"/>
+  <circle class="mp-dot" cx="44.5" cy="82" r="7" fill="#22261f"/>
+</svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ansible Mastery Path
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ansible Cheat Sheet: Quick Reference, Beginner to Advanced
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sigilipelli/ansible-mastery-path" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ansible-mastery-path
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../interview-questions/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Interview Questions
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Cheat Sheet
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../level-1/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Level 1 · Ansible Foundations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../level-2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Level 2 · Structure and Safety
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../level-3/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Level 3 · Extending Ansible
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../level-4/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Level 4 · Operating Ansible
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../quiz/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Final Quiz
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Ansible Mastery Path" class="md-nav__button md-logo" aria-label="Ansible Mastery Path" data-md-component="logo">
+      <svg class="mp-mark" viewBox="0 0 160 160" role="img" aria-label="Mastery Path logo">
+  <circle cx="80" cy="80" r="74" fill="#FAF7EF" stroke="#2FA98D" stroke-width="5"/>
+  <rect class="mp-bar mp-bar-1" x="36" y="90" width="17" height="24" rx="5" fill="#2FA98D"/>
+  <rect class="mp-bar mp-bar-2" x="59" y="74" width="17" height="40" rx="5" fill="#7FC9B7"/>
+  <rect class="mp-bar mp-bar-3" x="82" y="56" width="17" height="58" rx="5" fill="#E0B457"/>
+  <rect class="mp-bar mp-bar-4" x="105" y="38" width="17" height="76" rx="5" fill="#C97B4A"/>
+  <circle class="mp-dot" cx="44.5" cy="82" r="7" fill="#22261f"/>
+</svg>
+    </a>
+    Ansible Mastery Path
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sigilipelli/ansible-mastery-path" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ansible-mastery-path
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interview-questions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interview Questions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheat Sheet
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheat Sheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#level-1-ansible-foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 1 · Ansible Foundations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 1 · Ansible Foundations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-what-ansible-is-and-how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 · What Ansible Is and How It Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-ad-hoc-commands-modules-and-ansible-doc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 · Ad-Hoc Commands, Modules and ansible-doc
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-inventory-hosts-groups-and-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 · Inventory: Hosts, Groups and Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08-templates-and-handlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08 · Templates and Handlers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-debugging-and-reading-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 · Debugging and Reading Failures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-project-a-verified-baseline-playbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Project — A Verified Baseline Playbook
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-2-structure-and-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 2 · Structure and Safety
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 2 · Structure and Safety">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#02-variable-precedence-measured" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 · Variable Precedence, Measured
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-jinja2-filters-and-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 · Jinja2 Filters and Expressions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-tags-limits-and-targeting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 · Tags, Limits and Targeting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08-delegation-serial-batches-and-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08 · Delegation, Serial Batches and Strategies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-testing-and-linting-ansible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 · Testing and Linting Ansible
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-project-a-tested-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Project — A Tested Role
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-3-extending-ansible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 3 · Extending Ansible
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 3 · Extending Ansible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#06-performance-forks-pipelining-and-facts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 · Performance: Forks, Pipelining and Facts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-rolling-updates-and-failure-budgets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 · Rolling Updates and Failure Budgets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-project-a-tested-custom-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Project — A Tested Custom Module
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-4-operating-ansible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 4 · Operating Ansible
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 4 · Operating Ansible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-controllers-awx-and-execution-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 · Controllers, AWX and Execution Environments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-pull-mode-and-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 · Pull Mode and Bootstrap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-terraform-and-ansible-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 · Terraform and Ansible Together
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-auditing-drift-with-check-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 · Auditing Drift with Check Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-automation-incidents-and-blast-radius" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 · Automation Incidents and Blast Radius
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-capstone-managing-a-simulated-fleet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Capstone — Managing a Simulated Fleet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../level-1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 1 · Ansible Foundations
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Level 1 · Ansible Foundations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/01-what-ansible-is/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · What Ansible Is and How It Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/02-adhoc-and-docs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Ad-Hoc Commands, Modules and ansible-doc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/03-inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 · Inventory: Hosts, Groups and Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/04-playbook-anatomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · Playbook Anatomy: Plays, Tasks and Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/05-idempotency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Idempotency, Changed and Check Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/06-variables-facts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · Variables and Facts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/07-conditionals-loops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 · Conditionals, Loops and Registered Results
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/08-templates-handlers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 · Templates and Handlers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/09-debugging-playbooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 · Debugging and Reading Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/10-project-baseline-playbook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 · Project — A Verified Baseline Playbook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../level-2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 2 · Structure and Safety
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Level 2 · Structure and Safety
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/01-roles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · Roles: Reusable Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/02-variable-precedence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Variable Precedence, Measured
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/03-jinja-filters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 · Jinja2 Filters and Expressions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/04-blocks-errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · Blocks, Errors and Rescue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/05-vault/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Ansible Vault and Secrets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/06-collections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · Collections, Galaxy and Dependencies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/07-tags-limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 · Tags, Limits and Targeting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/08-delegation-strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 · Delegation, Serial Batches and Strategies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/09-testing-ansible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 · Testing and Linting Ansible
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/10-project-tested-role/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 · Project — A Tested Role
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../level-3/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 3 · Extending Ansible
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Level 3 · Extending Ansible
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/01-custom-modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · Writing a Custom Module
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/02-filter-plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Filter and Lookup Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/03-dynamic-inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 · Dynamic Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/04-command-shell-pitfalls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · Command and Shell Without Breaking Idempotency
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/05-async-polling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Async Tasks and Polling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/06-performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · Performance: Forks, Pipelining and Facts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/07-rolling-updates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 · Rolling Updates and Failure Budgets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/08-state-and-drift/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 · State, Drift and Convergence
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/09-network-windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 · Network and Windows Targets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/10-project-custom-module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 · Project — A Tested Custom Module
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../level-4/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 4 · Operating Ansible
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Level 4 · Operating Ansible
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/01-automation-platform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · Controllers, AWX and Execution Environments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/02-ansible-in-ci/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Ansible in CI/CD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/03-secrets-at-scale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 · Secrets and Credentials at Scale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/04-pull-mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · Pull Mode and Bootstrap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/05-terraform-and-ansible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Terraform and Ansible Together
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/06-drift-audit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · Auditing Drift with Check Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/07-incidents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 · Automation Incidents and Blast Radius
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/08-migration-antipatterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 · Migrating Scripts and Avoiding Anti-Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/09-governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 · Governance, Review and Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/10-capstone-fleet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 · Capstone — Managing a Simulated Fleet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Final Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#level-1-ansible-foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 1 · Ansible Foundations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 1 · Ansible Foundations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-what-ansible-is-and-how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 · What Ansible Is and How It Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-ad-hoc-commands-modules-and-ansible-doc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 · Ad-Hoc Commands, Modules and ansible-doc
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-inventory-hosts-groups-and-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 · Inventory: Hosts, Groups and Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08-templates-and-handlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08 · Templates and Handlers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-debugging-and-reading-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 · Debugging and Reading Failures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-project-a-verified-baseline-playbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Project — A Verified Baseline Playbook
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-2-structure-and-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 2 · Structure and Safety
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 2 · Structure and Safety">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#02-variable-precedence-measured" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 · Variable Precedence, Measured
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-jinja2-filters-and-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 · Jinja2 Filters and Expressions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-tags-limits-and-targeting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 · Tags, Limits and Targeting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08-delegation-serial-batches-and-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08 · Delegation, Serial Batches and Strategies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-testing-and-linting-ansible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 · Testing and Linting Ansible
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-project-a-tested-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Project — A Tested Role
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-3-extending-ansible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 3 · Extending Ansible
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 3 · Extending Ansible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#06-performance-forks-pipelining-and-facts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 · Performance: Forks, Pipelining and Facts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-rolling-updates-and-failure-budgets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 · Rolling Updates and Failure Budgets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-project-a-tested-custom-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Project — A Tested Custom Module
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-4-operating-ansible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 4 · Operating Ansible
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 4 · Operating Ansible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-controllers-awx-and-execution-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 · Controllers, AWX and Execution Environments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-pull-mode-and-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 · Pull Mode and Bootstrap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-terraform-and-ansible-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 · Terraform and Ansible Together
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-auditing-drift-with-check-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 · Auditing Drift with Check Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-automation-incidents-and-blast-radius" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 · Automation Incidents and Blast Radius
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-capstone-managing-a-simulated-fleet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Capstone — Managing a Simulated Fleet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+  
+
+
+<h1 id="ansible-cheat-sheet">Ansible Cheat Sheet<a class="headerlink" href="#ansible-cheat-sheet" title="Permanent link">&para;</a></h1>
+<p>Quick-reference tables from <strong>21 lessons</strong> of the free Ansible Mastery Path, in course order from beginner to advanced. Each section links to the full lesson with explanations and runnable examples.</p>
+<h2 id="level-1-ansible-foundations">Level 1 · Ansible Foundations<a class="headerlink" href="#level-1-ansible-foundations" title="Permanent link">&para;</a></h2>
+<h3 id="01-what-ansible-is-and-how-it-works"><a href="../level-1/01-what-ansible-is/">01 · What Ansible Is and How It Works</a><a class="headerlink" href="#01-what-ansible-is-and-how-it-works" title="Permanent link">&para;</a></h3>
+<p><em>What you actually write</em></p>
+<table>
+<thead>
+<tr>
+<th>Piece</th>
+<th>What it is</th>
+<th>Lesson</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Inventory</strong></td>
+<td>The hosts and groups you manage, and variables for them</td>
+<td>03</td>
+</tr>
+<tr>
+<td><strong>Playbook</strong></td>
+<td>A YAML file: one or more <strong>plays</strong>, each mapping a set of hosts to a list of tasks</td>
+<td>04</td>
+</tr>
+<tr>
+<td><strong>Module</strong></td>
+<td>The unit of work (<code>file</code>, <code>copy</code>, <code>template</code>, <code>user</code>, <code>package</code> ...)</td>
+<td>02</td>
+</tr>
+<tr>
+<td><strong>Task</strong></td>
+<td>One module call with arguments, a name, and optional conditions</td>
+<td>04</td>
+</tr>
+<tr>
+<td><strong>Variables and facts</strong></td>
+<td>Data from inventory, files, the command line, and information discovered on the host</td>
+<td>06</td>
+</tr>
+<tr>
+<td><strong>Handler</strong></td>
+<td>A task that runs only when notified by a task that changed something</td>
+<td>08</td>
+</tr>
+<tr>
+<td><strong>Role</strong></td>
+<td>A packaged directory structure of tasks, templates, defaults and handlers</td>
+<td>Level 2</td>
+</tr>
+<tr>
+<td><strong>Collection</strong></td>
+<td>A distribution unit for modules, roles and plugins (Galaxy)</td>
+<td>Level 2</td>
+</tr>
+<tr>
+<td><strong>Vault</strong></td>
+<td>Encryption for secret values in files</td>
+<td>Level 2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="02-ad-hoc-commands-modules-and-ansible-doc"><a href="../level-1/02-adhoc-and-docs/">02 · Ad-Hoc Commands, Modules and <code>ansible-doc</code></a><a class="headerlink" href="#02-ad-hoc-commands-modules-and-ansible-doc" title="Permanent link">&para;</a></h3>
+<p><em>Modules are the vocabulary</em></p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Modules</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Files</td>
+<td><code>file</code>, <code>copy</code>, <code>template</code>, <code>lineinfile</code>, <code>blockinfile</code>, <code>stat</code>, <code>fetch</code>, <code>unarchive</code></td>
+<td><code>stat</code> reads state without changing it</td>
+</tr>
+<tr>
+<td>Packages</td>
+<td><code>package</code>, <code>apt</code>, <code>dnf</code>, <code>pip</code></td>
+<td>Platform-specific; not run here</td>
+</tr>
+<tr>
+<td>Services</td>
+<td><code>service</code>, <code>systemd</code></td>
+<td>Linux; not run here</td>
+</tr>
+<tr>
+<td>Users</td>
+<td><code>user</code>, <code>group</code>, <code>authorized_key</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Commands</td>
+<td><code>command</code>, <code>shell</code>, <code>script</code>, <code>raw</code></td>
+<td>Last resort; idempotency is on you</td>
+</tr>
+<tr>
+<td>Control</td>
+<td><code>debug</code>, <code>assert</code>, <code>fail</code>, <code>set_fact</code>, <code>pause</code>, <code>wait_for</code></td>
+<td>Helpers inside playbooks</td>
+</tr>
+<tr>
+<td>Info</td>
+<td><code>setup</code> (facts), <code>package_facts</code>, <code>service_facts</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="03-inventory-hosts-groups-and-variables"><a href="../level-1/03-inventory/">03 · Inventory: Hosts, Groups and Variables</a><a class="headerlink" href="#03-inventory-hosts-groups-and-variables" title="Permanent link">&para;</a></h3>
+<p><em>Host patterns</em></p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Meaning</th>
+<th>Matched</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>web</code></td>
+<td>the group</td>
+<td>web1, web2</td>
+</tr>
+<tr>
+<td><code>web:db</code></td>
+<td>union</td>
+<td>web1, web2, db1</td>
+</tr>
+<tr>
+<td><code>prod:!db</code></td>
+<td>in prod but not db</td>
+<td>web1, web2</td>
+</tr>
+<tr>
+<td><code>web:&amp;prod</code></td>
+<td>intersection</td>
+<td>web1, web2</td>
+</tr>
+<tr>
+<td><code>web1,db1</code></td>
+<td>explicit list</td>
+<td>web1, db1</td>
+</tr>
+<tr>
+<td><code>nomatch</code></td>
+<td>nothing</td>
+<td><strong>0 hosts</strong>, with a warning</td>
+</tr>
+</tbody>
+</table>
+<h3 id="08-templates-and-handlers"><a href="../level-1/08-templates-handlers/">08 · Templates and Handlers</a><a class="headerlink" href="#08-templates-and-handlers" title="Permanent link">&para;</a></h3>
+<p><em>Handlers</em></p>
+<table>
+<thead>
+<tr>
+<th>Run</th>
+<th>What changed</th>
+<th>Handler</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 (fresh)</td>
+<td>directory, site.conf, extra.conf (3 changes)</td>
+<td>ran <strong>once</strong>, even though two tasks notified it</td>
+</tr>
+<tr>
+<td>2 (same inputs)</td>
+<td>nothing</td>
+<td><strong>did not run</strong> (recap <code>changed=0</code>)</td>
+</tr>
+<tr>
+<td>3 (<code>upstreams</code> changed)</td>
+<td>site.conf only</td>
+<td>ran once</td>
+</tr>
+</tbody>
+</table>
+<h3 id="09-debugging-and-reading-failures"><a href="../level-1/09-debugging-playbooks/">09 · Debugging and Reading Failures</a><a class="headerlink" href="#09-debugging-and-reading-failures" title="Permanent link">&para;</a></h3>
+<p><em>Read the failure top-down</em></p>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Likely cause</th>
+<th>First step</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>YAML parsing failed ... did not find expected key</code></td>
+<td>Indentation, colon/quote problem</td>
+<td>Look at the origin line and the one above</td>
+</tr>
+<tr>
+<td><code>'x' is undefined</code></td>
+<td>Missing variable, typo, wrong scope, fact not gathered</td>
+<td><code>debug: var=x</code>, check inventory with <code>ansible-inventory --host</code></td>
+</tr>
+<tr>
+<td><code>couldn't resolve module/action</code></td>
+<td>Misspelled module or missing collection</td>
+<td><code>ansible-doc &lt;name&gt;</code>, check FQCN</td>
+</tr>
+<tr>
+<td><code>Unsupported parameters for module</code></td>
+<td>Wrong argument for this version</td>
+<td><code>ansible-doc -s &lt;module&gt;</code></td>
+</tr>
+<tr>
+<td><code>Conditionals must have a boolean result</code></td>
+<td>String used as a boolean</td>
+<td>Add <code>| bool</code> or fix the type</td>
+</tr>
+<tr>
+<td><code>UNREACHABLE</code></td>
+<td>Connection (SSH, host key, network, interpreter)</td>
+<td><code>-vvv</code>, try the same <code>ssh</code> command by hand</td>
+</tr>
+<tr>
+<td><code>FAILED</code> with <code>rc=...</code> and <code>stderr</code></td>
+<td>The command or module ran and failed</td>
+<td>Read <code>stderr</code>/<code>msg</code>; reproduce by hand</td>
+</tr>
+<tr>
+<td><code>Missing sudo password</code> / <code>become</code> errors</td>
+<td>Privilege escalation not configured</td>
+<td>Test <code>sudo -n true</code> on the target</td>
+</tr>
+</tbody>
+</table>
+<h3 id="10-project-a-verified-baseline-playbook"><a href="../level-1/10-project-baseline-playbook/">10 · Project — A Verified Baseline Playbook</a><a class="headerlink" href="#10-project-a-verified-baseline-playbook" title="Permanent link">&para;</a></h3>
+<p><em>The test suite</em></p>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>What it proves</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First run changes everything</td>
+<td>Both nodes show <code>changed=6</code>, exit status 0</td>
+</tr>
+<tr>
+<td>Second run is idempotent</td>
+<td><code>changed=0</code> and <code>failed=0</code> on every node</td>
+</tr>
+<tr>
+<td>Check mode writes nothing</td>
+<td>On a fresh sandbox, <code>--check</code> reports at least 5 changes and <strong>the sandbox directory does not exist afterwards</strong></td>
+</tr>
+<tr>
+<td>Per-host variable reaches template</td>
+<td><code>node1</code> file contains <code>port = 8080</code>, <code>node2</code> contains <code>port = 9090</code></td>
+</tr>
+<tr>
+<td>Modes are enforced</td>
+<td><code>var/lib/app</code> is 0700 and <code>sshd_config</code> is 0600 (<code>stat</code>)</td>
+</tr>
+<tr>
+<td>Drift detected, then repaired</td>
+<td>After appending <code>port = 1</code>: check mode reports changes only for <code>node1</code> and leaves the bad line; a real run removes it; a further run is <code>changed=0</code></td>
+</tr>
+<tr>
+<td>Handler runs only on config change</td>
+<td>Counter is 1 after the first run, still 1 after an unchanged re-run, 2 after running with <code>-e workers=4</code></td>
+</tr>
+<tr>
+<td>Manual edit of <code>sshd_config</code> is reverted</td>
+<td>A file containing <code>PermitRootLogin yes</code> is rewritten to <code>PermitRootLogin no</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="level-2-structure-and-safety">Level 2 · Structure and Safety<a class="headerlink" href="#level-2-structure-and-safety" title="Permanent link">&para;</a></h2>
+<h3 id="02-variable-precedence-measured"><a href="../level-2/02-variable-precedence/">02 · Variable Precedence, Measured</a><a class="headerlink" href="#02-variable-precedence-measured" title="Permanent link">&para;</a></h3>
+<p><em>The result (highest first)</em></p>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Source</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>-e</code> extra vars</td>
+<td>beats everything, including <code>set_fact</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>set_fact</code></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>include_vars</code></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>task <code>vars:</code></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>role <code>vars/main.yml</code></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>play <code>vars_files:</code></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>play <code>vars:</code></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>host_vars/&lt;host&gt;.yml</code></td>
+<td>next to the inventory</td>
+</tr>
+<tr>
+<td>9</td>
+<td>inventory file, host entry</td>
+<td><code>h1 x=...</code></td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>group_vars/web.yml</code></td>
+<td>specific group</td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>group_vars/all.yml</code></td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>inventory file <code>[web:vars]</code></td>
+<td></td>
+</tr>
+<tr>
+<td>13</td>
+<td>inventory file <code>[all:vars]</code></td>
+<td></td>
+</tr>
+<tr>
+<td>14</td>
+<td>role <code>defaults/main.yml</code></td>
+<td>lowest</td>
+</tr>
+</tbody>
+</table>
+<h3 id="03-jinja2-filters-and-expressions"><a href="../level-2/03-jinja-filters/">03 · Jinja2 Filters and Expressions</a><a class="headerlink" href="#03-jinja2-filters-and-expressions" title="Permanent link">&para;</a></h3>
+<p><em>Lists of dictionaries</em></p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>servers \| map(attribute='name') \| list</code></td>
+<td><code>[a, b, c]</code></td>
+</tr>
+<tr>
+<td><code>servers \| map(attribute='name') \| join(',')</code></td>
+<td><code>a,b,c</code></td>
+</tr>
+<tr>
+<td><code>servers \| selectattr('port', 'gt', 100) \| map(attribute='name') \| list</code></td>
+<td><code>[b, c]</code></td>
+</tr>
+<tr>
+<td><code>servers \| rejectattr('tags') \| map(attribute='name') \| list</code></td>
+<td><code>[c]</code> (empty tag list is falsy)</td>
+</tr>
+<tr>
+<td><code>servers \| map(attribute='tags') \| flatten \| unique \| sort</code></td>
+<td><code>[x, y]</code></td>
+</tr>
+<tr>
+<td><code>dict(names \| zip(ports))</code></td>
+<td><code>{a: 80, b: 8080, c: 443}</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="07-tags-limits-and-targeting"><a href="../level-2/07-tags-limits/">07 · Tags, Limits and Targeting</a><a class="headerlink" href="#07-tags-limits-and-targeting" title="Permanent link">&para;</a></h3>
+<p><em>Tags: which tasks run</em></p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Tasks that ran</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(no options)</td>
+<td>install, configure, always runs, untagged</td>
+</tr>
+<tr>
+<td><code>--tags configure</code></td>
+<td>configure, <strong>always runs</strong></td>
+</tr>
+<tr>
+<td><code>--skip-tags setup</code></td>
+<td>always runs, untagged</td>
+</tr>
+<tr>
+<td><code>--tags debug_only</code></td>
+<td>always runs, <strong>never unless asked</strong></td>
+</tr>
+<tr>
+<td><code>--tags nonexistent</code></td>
+<td>always runs</td>
+</tr>
+<tr>
+<td><code>--tags setup --skip-tags configure</code></td>
+<td>install, always runs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="08-delegation-serial-batches-and-strategies"><a href="../level-2/08-delegation-strategies/">08 · Delegation, Serial Batches and Strategies</a><a class="headerlink" href="#08-delegation-serial-batches-and-strategies" title="Permanent link">&para;</a></h3>
+<p><em>Failure budgets</em></p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Failing hosts</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>serial: 1</code>, default (0%)</td>
+<td><code>n1</code></td>
+<td><code>n1</code> failed; <strong><code>n2</code>..<code>n4</code> never ran</strong> (the play aborted)</td>
+</tr>
+<tr>
+<td><code>serial: 2</code>, <code>max_fail_percentage: 50</code></td>
+<td><code>n1</code> (1 of 2 = 50%)</td>
+<td>batch continued; <code>n2</code> finished; <strong><code>n3</code> and <code>n4</code> ran</strong></td>
+</tr>
+<tr>
+<td><code>serial: 2</code>, <code>max_fail_percentage: 50</code></td>
+<td><code>n1</code> and <code>n2</code> (100% &gt; 50%)</td>
+<td>play aborted; <strong><code>n3</code> and <code>n4</code> never ran</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="09-testing-and-linting-ansible"><a href="../level-2/09-testing-ansible/">09 · Testing and Linting Ansible</a><a class="headerlink" href="#09-testing-and-linting-ansible" title="Permanent link">&para;</a></h3>
+<p><em>Rung 2: ansible-lint</em></p>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Count</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fqcn</code></td>
+<td>4</td>
+<td>Use <code>ansible.builtin.shell</code>, not <code>shell</code></td>
+</tr>
+<tr>
+<td><code>name</code> (missing/casing/play)</td>
+<td>4</td>
+<td>Name plays and tasks, start names uppercase</td>
+</tr>
+<tr>
+<td><code>no-changed-when</code></td>
+<td>2</td>
+<td><code>command</code>/<code>shell</code> without <code>changed_when</code> (breaks idempotency reporting, Level 1 · 05)</td>
+</tr>
+<tr>
+<td><code>no-free-form</code></td>
+<td>2</td>
+<td>Avoid <code>copy: src=a dest=b</code> free-form arguments</td>
+</tr>
+<tr>
+<td><code>package-latest</code></td>
+<td>1</td>
+<td><code>state: latest</code> makes runs non-reproducible</td>
+</tr>
+</tbody>
+</table>
+<h3 id="10-project-a-tested-role"><a href="../level-2/10-project-tested-role/">10 · Project — A Tested Role</a><a class="headerlink" href="#10-project-a-tested-role" title="Permanent link">&para;</a></h3>
+<p><em>The tests</em></p>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Asserts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>defaults and per-host override</td>
+<td><code>w1</code> file has <code>port=8080</code>; <code>w2</code>, with host var <code>webapp_port=9000</code>, has <code>port=9000</code></td>
+</tr>
+<tr>
+<td>role parameter overrides default</td>
+<td><code>vars: {webapp_workers: 7}</code> produces <code>workers=7</code></td>
+</tr>
+<tr>
+<td>idempotent</td>
+<td>second run: exit 0 and <code>changed=0</code> for every host</td>
+</tr>
+<tr>
+<td>handler fires only on change</td>
+<td>first run: exactly one <code>RUNNING HANDLER</code>; second run: none</td>
+</tr>
+<tr>
+<td>invalid port fails before changing anything</td>
+<td><code>webapp_port=70000</code>: non-zero exit, the message <code>webapp_port must be ...</code> appears, and the output directory does not exist</td>
+</tr>
+<tr>
+<td>zero workers rejected</td>
+<td><code>webapp_workers=0</code>: non-zero exit</td>
+</tr>
+<tr>
+<td>check mode writes nothing</td>
+<td><code>--check</code>: exit 0, output directory not created</td>
+</tr>
+<tr>
+<td>role parameter beats <code>vars/main.yml</code></td>
+<td>passing <code>webapp_config_mode: "0600"</code> yields a file with mode <code>0600</code></td>
+</tr>
+<tr>
+<td>lint</td>
+<td><code>ansible-lint roles/webapp</code> exits 0 (production profile)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="level-3-extending-ansible">Level 3 · Extending Ansible<a class="headerlink" href="#level-3-extending-ansible" title="Permanent link">&para;</a></h2>
+<h3 id="06-performance-forks-pipelining-and-facts"><a href="../level-3/06-performance/">06 · Performance: Forks, Pipelining and Facts</a><a class="headerlink" href="#06-performance-forks-pipelining-and-facts" title="Permanent link">&para;</a></h3>
+<p><em>Forks: how many hosts run in parallel</em></p>
+<table>
+<thead>
+<tr>
+<th><code>-f</code></th>
+<th>Wall time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>50.1 s</td>
+</tr>
+<tr>
+<td>5</td>
+<td>11.1 s</td>
+</tr>
+<tr>
+<td>10</td>
+<td>6.6 s</td>
+</tr>
+<tr>
+<td>20</td>
+<td>4.5 s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="07-rolling-updates-and-failure-budgets"><a href="../level-3/07-rolling-updates/">07 · Rolling Updates and Failure Budgets</a><a class="headerlink" href="#07-rolling-updates-and-failure-budgets" title="Permanent link">&para;</a></h3>
+<p><em>Results from the tests</em></p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All healthy</td>
+<td>All eight at <code>2.0</code>, all in rotation, three batches ran, exit 0</td>
+</tr>
+<tr>
+<td>Canary (<code>n1</code>) fails smoke test</td>
+<td>Exit non-zero; <strong>all hosts at <code>1.0</code></strong> (the canary rolled back, nobody else touched); all in rotation; only one batch started; the canary's event log reads <code>drained</code>, <code>rolled back</code></td>
+</tr>
+<tr>
+<td><code>n3</code> fails (second batch)</td>
+<td>Exit non-zero; <code>n1</code> stays at <code>2.0</code> (first batch succeeded); <code>n3</code> back at <code>1.0</code>; <code>n6</code>, <code>n8</code> (third batch) still at <code>1.0</code>; all in rotation</td>
+</tr>
+<tr>
+<td>Re-run after the fix</td>
+<td>Finishes: all eight at <code>2.0</code> (hosts already updated are no-ops)</td>
+</tr>
+<tr>
+<td>Run twice when healthy</td>
+<td>Second run changes no versions</td>
+</tr>
+</tbody>
+</table>
+<h3 id="10-project-a-tested-custom-module"><a href="../level-3/10-project-custom-module/">10 · Project — A Tested Custom Module</a><a class="headerlink" href="#10-project-a-tested-custom-module" title="Permanent link">&para;</a></h3>
+<p><em>The 25 tests</em></p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Count</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pure function</td>
+<td>11</td>
+<td>add, replace, unchanged returns same lines, remove, absent-when-missing no-op, comments preserved, duplicates collapsed, spaces around <code>=</code>, empty file, prefix key not confused, hash equals <code>hashlib</code></td>
+</tr>
+<tr>
+<td>Module as Ansible runs it</td>
+<td>13</td>
+<td>create-then-idempotent; check mode does not write; diff content; mode set; <strong>mode-only change reported</strong>; three rejected inputs (parametrised); missing file; absent on missing is a no-op; unknown argument rejected; <code>filehash</code> missing file and output</td>
+</tr>
+<tr>
+<td>Real <code>ansible-playbook</code></td>
+<td>1</td>
+<td>second run <code>changed=0</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="level-4-operating-ansible">Level 4 · Operating Ansible<a class="headerlink" href="#level-4-operating-ansible" title="Permanent link">&para;</a></h2>
+<h3 id="01-controllers-awx-and-execution-environments"><a href="../level-4/01-automation-platform/">01 · Controllers, AWX and Execution Environments</a><a class="headerlink" href="#01-controllers-awx-and-execution-environments" title="Permanent link">&para;</a></h3>
+<p><em>What a controller adds</em></p>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Projects</strong></td>
+<td>A link to a Git repository with playbooks; the controller syncs it before jobs</td>
+</tr>
+<tr>
+<td><strong>Inventories</strong></td>
+<td>Static or dynamic sources, with credentials for cloud syncs</td>
+</tr>
+<tr>
+<td><strong>Credentials</strong></td>
+<td>Encrypted stores for SSH keys, vault passwords, cloud tokens; users can <em>use</em> a credential without <em>seeing</em> it</td>
+</tr>
+<tr>
+<td><strong>Job templates</strong></td>
+<td>A saved combination: playbook + inventory + credentials + limit + extra vars + execution environment</td>
+</tr>
+<tr>
+<td><strong>RBAC</strong></td>
+<td>Who can run, edit, or read each template, inventory and credential</td>
+</tr>
+<tr>
+<td><strong>Scheduling</strong></td>
+<td>Cron-like runs, for drift audits and maintenance (Lesson 06)</td>
+</tr>
+<tr>
+<td><strong>Workflows</strong></td>
+<td>Chains of templates with success/failure branches and approval steps</td>
+</tr>
+<tr>
+<td><strong>Logging and history</strong></td>
+<td>Every run's output, who started it, with what parameters; usually an API and a UI</td>
+</tr>
+<tr>
+<td><strong>API / CLI</strong></td>
+<td>Trigger jobs from CI or other systems</td>
+</tr>
+<tr>
+<td><strong>Execution isolation</strong></td>
+<td>Jobs run in separate containers (execution environments) rather than on a shared shell</td>
+</tr>
+</tbody>
+</table>
+<h3 id="04-pull-mode-and-bootstrap"><a href="../level-4/04-pull-mode/">04 · Pull Mode and Bootstrap</a><a class="headerlink" href="#04-pull-mode-and-bootstrap" title="Permanent link">&para;</a></h3>
+<p><em><code>--only-if-changed</code> and drift</em></p>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Command</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No new commit</td>
+<td><code>ansible-pull ... --only-if-changed</code></td>
+<td><code>Repository has not changed, quitting</code>; <strong>playbook not run</strong></td>
+</tr>
+<tr>
+<td>New commit (<code>release</code> default changed 1 → 2)</td>
+<td>with <code>--only-if-changed</code></td>
+<td>playbook ran, <code>changed=1</code>, motd now <code>version 2</code></td>
+</tr>
+<tr>
+<td>Someone edits motd by hand (<code>hacked</code>)</td>
+<td>plain <code>ansible-pull</code></td>
+<td>playbook ran, <code>changed=1</code>, motd restored to <code>version 2</code></td>
+</tr>
+<tr>
+<td>Someone edits motd by hand</td>
+<td><code>--only-if-changed</code></td>
+<td><strong>nothing happened; the hand edit remained</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="05-terraform-and-ansible-together"><a href="../level-4/05-terraform-and-ansible/">05 · Terraform and Ansible Together</a><a class="headerlink" href="#05-terraform-and-ansible-together" title="Permanent link">&para;</a></h3>
+<p><em>Division of labour</em></p>
+<table>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Better owned by</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Networks, VMs, load balancers, databases, DNS</td>
+<td>Terraform</td>
+<td>State, dependency graph, plan/diff, destroy</td>
+</tr>
+<tr>
+<td>OS packages, config files, users, services on a host</td>
+<td>Ansible</td>
+<td>Fine-grained on-host modules, templates, handlers</td>
+</tr>
+<tr>
+<td>Application deployment steps and orchestration</td>
+<td>Ansible (or a deploy tool)</td>
+<td>Ordering, batches, delegation</td>
+</tr>
+<tr>
+<td>Bootstrapping (first boot)</td>
+<td>cloud-init / images, then Ansible</td>
+<td>The machine must exist and be reachable first</td>
+</tr>
+<tr>
+<td>Secrets storage</td>
+<td>A secret manager</td>
+<td>Neither tool is a secret store</td>
+</tr>
+</tbody>
+</table>
+<h3 id="06-auditing-drift-with-check-mode"><a href="../level-4/06-drift-audit/">06 · Auditing Drift with Check Mode</a><a class="headerlink" href="#06-auditing-drift-with-check-mode" title="Permanent link">&para;</a></h3>
+<p><em>The runner and its exit codes</em></p>
+<table>
+<thead>
+<tr>
+<th>Exit</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>No drift on any host</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Drift found (at least one task would change something)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A task failed or a host was unreachable: <strong>the audit result is not trustworthy</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="07-automation-incidents-and-blast-radius"><a href="../level-4/07-incidents/">07 · Automation Incidents and Blast Radius</a><a class="headerlink" href="#07-automation-incidents-and-blast-radius" title="Permanent link">&para;</a></h3>
+<p><em>How playbooks cause incidents</em></p>
+<table>
+<thead>
+<tr>
+<th>Cause</th>
+<th>Example</th>
+<th>Control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wrong target</td>
+<td><code>hosts: all</code> in a play meant for staging; a <code>--limit</code> forgotten</td>
+<td>Preflight, protected groups, inventory per environment</td>
+</tr>
+<tr>
+<td>Wrong variable</td>
+<td><code>-e version=</code> empty; a default overridden by <code>-e</code> or <code>set_fact</code> (precedence, Level 2 · 02)</td>
+<td>Input validation (<code>assert</code>), no free-text <code>-e</code> in templates</td>
+</tr>
+<tr>
+<td>Non-idempotent task</td>
+<td>A "fix" that restarts a service on every run</td>
+<td>Idempotence test in CI (Lesson 02)</td>
+</tr>
+<tr>
+<td>Batch too large</td>
+<td>200 hosts restarted at once</td>
+<td><code>serial</code>, failure budget, tested abort semantics (Level 3 · 07)</td>
+</tr>
+<tr>
+<td>Conflicting owners</td>
+<td>Two roles flip a setting each run (Level 3 · 08)</td>
+<td>One owner per resource; audit</td>
+</tr>
+<tr>
+<td>Drift repair that overwrote an emergency fix</td>
+<td>Scheduled apply reverted a hot patch</td>
+<td>Drift audit before apply; change freeze flags</td>
+</tr>
+<tr>
+<td>Stale facts / cache</td>
+<td>Acting on cached facts about a rebuilt host</td>
+<td>Short fact cache expiry; gather before destructive tasks</td>
+</tr>
+<tr>
+<td>Secret exposure</td>
+<td><code>debug</code> or <code>-vvv</code> log with a token</td>
+<td><code>no_log</code>, linter, log access control (Lesson 03)</td>
+</tr>
+<tr>
+<td>Dependency drift</td>
+<td>A collection or ansible-core upgrade changes behaviour (this course found <code>when:</code> on a string became an error in 2.21.5)</td>
+<td>Pin versions; test upgrades; EEs</td>
+</tr>
+<tr>
+<td>Inventory error</td>
+<td>Dynamic source returns the wrong set or an empty set</td>
+<td>Inventory sanity checks, fail on empty</td>
+</tr>
+<tr>
+<td>Lack of rollback</td>
+<td>A destructive task with no way back</td>
+<td>Backups, <code>state: absent</code> as a deliberate step, rehearsed rollback</td>
+</tr>
+<tr>
+<td>Credentials too powerful</td>
+<td>The Ansible user can do anything everywhere</td>
+<td>Least privilege, per-environment keys</td>
+</tr>
+</tbody>
+</table>
+<h3 id="10-capstone-managing-a-simulated-fleet"><a href="../level-4/10-capstone-fleet/">10 · Capstone — Managing a Simulated Fleet</a><a class="headerlink" href="#10-capstone-managing-a-simulated-fleet" title="Permanent link">&para;</a></h3>
+<p><em>The sequence, as tests</em></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Step</th>
+<th>Assertion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Secret hygiene</td>
+<td><code>nologlint</code> finds nothing in the playbook</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Lint</td>
+<td><code>ansible-lint</code> passes (production profile)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>First converge</td>
+<td>All 12 nodes <code>changed=6</code>, no failures</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Idempotence</td>
+<td>Second run <code>changed=0</code> on all 12</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Drift injected and audited</strong></td>
+<td>Three kinds of drift on three nodes; the audit reports exactly <code>db02</code>, <code>web03</code>, <code>web07</code>, exits 1, and <strong>repairs nothing</strong></td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Preflight</strong></td>
+<td><code>all</code> is refused (exceeds <code>--max-hosts 5</code>); a single production node is refused without <code>--allow-protected</code>; a three-node list with <code>--allow-protected</code> passes</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Targeted repair</strong></td>
+<td><code>--limit web03,db02,web07</code>: only those three hosts run and change; four untouched nodes' <code>app.conf</code> modification times are <strong>unchanged</strong></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Audit again</td>
+<td>Clean: exit 0, no drifted hosts</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Per-node variables survived</td>
+<td><code>web03</code> still has <code>port = 8003</code>, <code>db02</code> has <code>port = 5402</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>Go deeper with the full <a href="../">Ansible Mastery Path</a> curriculum or test yourself with the <a href="../interview-questions/">interview questions</a>.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+  
+  <nav class="mp-related" aria-label="Related free courses">
+    <h2>Related free courses</h2>
+    <ul>
+      <li><a href="https://learnmasterypath.com/server-ops-mastery-path/">Server Ops</a></li><li><a href="https://learnmasterypath.com/linux-mastery-path/">Linux</a></li><li><a href="https://learnmasterypath.com/nodemcu-mastery-path/">NodeMCU/IoT</a></li><li><a href="https://learnmasterypath.com/terraform-mastery-path/">Terraform</a></li><li><a href="https://learnmasterypath.com/kubernetes-mastery-path/">Kubernetes</a></li>
+      <li><a href="https://learnmasterypath.com/">All 100+ courses &rarr;</a></li>
+    </ul>
+  </nav>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../interview-questions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Interview Questions">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Interview Questions
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../level-1/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+  <div class="mp-foot">
+    <div class="mp-foot-inner">
+      <a class="mp-foot-brand" href="https://learnmasterypath.com/"><svg class="mp-mark" viewBox="0 0 160 160" role="img" aria-label="Mastery Path logo">
+  <circle cx="80" cy="80" r="74" fill="#FAF7EF" stroke="#2FA98D" stroke-width="5"/>
+  <rect class="mp-bar mp-bar-1" x="36" y="90" width="17" height="24" rx="5" fill="#2FA98D"/>
+  <rect class="mp-bar mp-bar-2" x="59" y="74" width="17" height="40" rx="5" fill="#7FC9B7"/>
+  <rect class="mp-bar mp-bar-3" x="82" y="56" width="17" height="58" rx="5" fill="#E0B457"/>
+  <rect class="mp-bar mp-bar-4" x="105" y="38" width="17" height="76" rx="5" fill="#C97B4A"/>
+  <circle class="mp-dot" cx="44.5" cy="82" r="7" fill="#22261f"/>
+</svg><span>Mastery Path</span></a>
+      <nav class="mp-sitelinks" aria-label="Site and legal links">
+        <a href="https://learnmasterypath.com/">All courses</a>
+        <a href="https://learnmasterypath.com/about.html">About</a>
+        <a href="https://learnmasterypath.com/contact.html">Contact</a>
+        <a href="https://learnmasterypath.com/ansible-mastery-path/privacy/">Privacy Policy</a>
+        <a href="https://learnmasterypath.com/terms.html">Terms</a>
+        <a href="https://learnmasterypath.com/ansible-mastery-path/license/">License</a>
+        <a href="https://learnmasterypath.com/verify/">Verify a certificate</a>
+      </nav>
+    </div>
+    <p class="mp-license-note">
+      © 2026 Vinod Kumar Sigilipelli · Except where otherwise noted, lesson content is licensed under
+      <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> and code examples under the
+      <a href="https://opensource.org/license/mit">MIT License</a>.
+    </p>
+  </div>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.path", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.indexes", "toc.follow", "content.code.copy", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../javascripts/progress-tracker.js"></script>
+      
+        <script src="../javascripts/final-quiz.js"></script>
+      
+    
+  </body>
+</html>

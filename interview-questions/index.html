@@ -1,0 +1,4178 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="179 Ansible interview questions with answers and explanations, from beginner to advanced, organised by level. Free, from the Ansible Mastery Path.">
+      
+      
+      
+        <link rel="canonical" href="https://learnmasterypath.com/ansible-mastery-path/interview-questions/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../cheat-sheet/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
+    
+    
+  
+  <title>Ansible Interview Questions and Answers (179 Questions)</title>
+
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../stylesheets/progress-tracker.css">
+    
+      <link rel="stylesheet" href="../stylesheets/final-quiz.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-05VBGCXN12"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-05VBGCXN12');
+  </script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mastery Path">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Ansible Interview Questions and Answers (179 Questions)">
+  <meta property="og:description" content="179 Ansible interview questions with answers and explanations, from beginner to advanced, organised by level. Free, from the Ansible Mastery Path.">
+  <meta property="og:url" content="https://learnmasterypath.com/ansible-mastery-path/interview-questions/">
+  <meta property="og:image" content="https://learnmasterypath.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mastery Path: free structured courses, beginner to master">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ansible Interview Questions and Answers (179 Questions)">
+  <meta name="twitter:description" content="179 Ansible interview questions with answers and explanations, from beginner to advanced, organised by level. Free, from the Ansible Mastery Path.">
+  <meta name="twitter:image" content="https://learnmasterypath.com/og-image.png">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9440969811959397"
+     crossorigin="anonymous"></script><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Mastery Path", "item": "https://learnmasterypath.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Ansible Mastery Path", "item": "https://learnmasterypath.com/ansible-mastery-path/"},
+      {"@type": "ListItem", "position": 3, "name": "Interview Questions", "item": "https://learnmasterypath.com/ansible-mastery-path/interview-questions/"}
+    ]
+  }
+  </script>
+  <style>
+    .md-banner a:hover { text-decoration: underline !important; }
+    .mp-related { margin-top: 2.4rem; padding-top: 1rem; border-top: 1px solid var(--md-default-fg-color--lightest); font-size: .78rem; }
+    .mp-related h2 { font-size: .9rem; margin: 0 0 .5rem; }
+    .mp-related ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem .9rem; }
+    .mp-related li { margin: 0 !important; }
+  </style>
+  <script type="application/json" id="mp-course-meta">{"home": false, "id": "ansible-mastery-path", "name": "Ansible Mastery Path", "repo": "https://github.com/sigilipelli/ansible-mastery-path", "src": "interview-questions.md", "url": "https://learnmasterypath.com/ansible-mastery-path/"}</script>
+  <link rel="stylesheet" href="https://learnmasterypath.com/assets/learn.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://learnmasterypath.com/assets/course.css?v=1">
+  <script src="https://learnmasterypath.com/assets/learn.js" defer></script>
+  <script src="https://learnmasterypath.com/assets/signup.js" defer></script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ansible-interview-questions-and-answers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <a href="https://learnmasterypath.com/" style="color: inherit; text-decoration: none;">
+    &larr; Mastery Path &middot; all 100+ free courses
+  </a>
+  <span style="opacity: .6; margin: 0 .6em;">|</span>
+  <a href="https://learnmasterypath.com/search/" style="color: inherit; text-decoration: none;">Search all courses</a>
+  <span style="opacity: .6; margin: 0 .6em;">|</span>
+  <a href="https://learnmasterypath.com/resume/" style="color: inherit; font-weight: 700; text-decoration: none;">
+    Got the skills? Free resume ATS check &rarr;
+  </a>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Ansible Mastery Path" class="md-header__button md-logo" aria-label="Ansible Mastery Path" data-md-component="logo">
+      <svg class="mp-mark" viewBox="0 0 160 160" role="img" aria-label="Mastery Path logo">
+  <circle cx="80" cy="80" r="74" fill="#FAF7EF" stroke="#2FA98D" stroke-width="5"/>
+  <rect class="mp-bar mp-bar-1" x="36" y="90" width="17" height="24" rx="5" fill="#2FA98D"/>
+  <rect class="mp-bar mp-bar-2" x="59" y="74" width="17" height="40" rx="5" fill="#7FC9B7"/>
+  <rect class="mp-bar mp-bar-3" x="82" y="56" width="17" height="58" rx="5" fill="#E0B457"/>
+  <rect class="mp-bar mp-bar-4" x="105" y="38" width="17" height="76" rx="5" fill="#C97B4A"/>
+  <circle class="mp-dot" cx="44.5" cy="82" r="7" fill="#22261f"/>
+</svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ansible Mastery Path
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ansible Interview Questions and Answers (179 Questions)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sigilipelli/ansible-mastery-path" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ansible-mastery-path
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Interview Questions
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../cheat-sheet/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Cheat Sheet
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../level-1/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Level 1 · Ansible Foundations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../level-2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Level 2 · Structure and Safety
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../level-3/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Level 3 · Extending Ansible
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../level-4/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Level 4 · Operating Ansible
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../quiz/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Final Quiz
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Ansible Mastery Path" class="md-nav__button md-logo" aria-label="Ansible Mastery Path" data-md-component="logo">
+      <svg class="mp-mark" viewBox="0 0 160 160" role="img" aria-label="Mastery Path logo">
+  <circle cx="80" cy="80" r="74" fill="#FAF7EF" stroke="#2FA98D" stroke-width="5"/>
+  <rect class="mp-bar mp-bar-1" x="36" y="90" width="17" height="24" rx="5" fill="#2FA98D"/>
+  <rect class="mp-bar mp-bar-2" x="59" y="74" width="17" height="40" rx="5" fill="#7FC9B7"/>
+  <rect class="mp-bar mp-bar-3" x="82" y="56" width="17" height="58" rx="5" fill="#E0B457"/>
+  <rect class="mp-bar mp-bar-4" x="105" y="38" width="17" height="76" rx="5" fill="#C97B4A"/>
+  <circle class="mp-dot" cx="44.5" cy="82" r="7" fill="#22261f"/>
+</svg>
+    </a>
+    Ansible Mastery Path
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sigilipelli/ansible-mastery-path" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ansible-mastery-path
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interview Questions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interview Questions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#level-1-ansible-foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 1 · Ansible Foundations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 1 · Ansible Foundations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-what-ansible-is-and-how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 · What Ansible Is and How It Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-ad-hoc-commands-modules-and-ansible-doc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 · Ad-Hoc Commands, Modules and ansible-doc
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-inventory-hosts-groups-and-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 · Inventory: Hosts, Groups and Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-playbook-anatomy-plays-tasks-and-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 · Playbook Anatomy: Plays, Tasks and Modules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-idempotency-changed-and-check-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 · Idempotency, changed and Check Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-variables-and-facts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 · Variables and Facts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-conditionals-loops-and-registered-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 · Conditionals, Loops and Registered Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08-templates-and-handlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08 · Templates and Handlers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-debugging-and-reading-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 · Debugging and Reading Failures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-project-a-verified-baseline-playbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Project — A Verified Baseline Playbook
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-2-structure-and-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 2 · Structure and Safety
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 2 · Structure and Safety">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-roles-reusable-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 · Roles: Reusable Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-variable-precedence-measured" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 · Variable Precedence, Measured
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-jinja2-filters-and-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 · Jinja2 Filters and Expressions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-blocks-errors-and-rescue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 · Blocks, Errors and Rescue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-ansible-vault-and-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 · Ansible Vault and Secrets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-collections-galaxy-and-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 · Collections, Galaxy and Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-tags-limits-and-targeting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 · Tags, Limits and Targeting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08-delegation-serial-batches-and-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08 · Delegation, Serial Batches and Strategies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-testing-and-linting-ansible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 · Testing and Linting Ansible
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-project-a-tested-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Project — A Tested Role
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-3-extending-ansible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 3 · Extending Ansible
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 3 · Extending Ansible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-writing-a-custom-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 · Writing a Custom Module
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-filter-and-lookup-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 · Filter and Lookup Plugins
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-dynamic-inventory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 · Dynamic Inventory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-command-and-shell-without-breaking-idempotency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 · command and shell Without Breaking Idempotency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-async-tasks-and-polling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 · Async Tasks and Polling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-performance-forks-pipelining-and-facts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 · Performance: Forks, Pipelining and Facts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-rolling-updates-and-failure-budgets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 · Rolling Updates and Failure Budgets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08-state-drift-and-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08 · State, Drift and Convergence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-network-and-windows-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 · Network and Windows Targets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-project-a-tested-custom-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Project — A Tested Custom Module
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-4-operating-ansible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 4 · Operating Ansible
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 4 · Operating Ansible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-controllers-awx-and-execution-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 · Controllers, AWX and Execution Environments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-ansible-in-cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 · Ansible in CI/CD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-secrets-and-credentials-at-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 · Secrets and Credentials at Scale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-pull-mode-and-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 · Pull Mode and Bootstrap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-terraform-and-ansible-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 · Terraform and Ansible Together
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-auditing-drift-with-check-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 · Auditing Drift with Check Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-automation-incidents-and-blast-radius" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 · Automation Incidents and Blast Radius
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08-migrating-scripts-and-avoiding-anti-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08 · Migrating Scripts and Avoiding Anti-Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-governance-review-and-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 · Governance, Review and Standards
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-capstone-managing-a-simulated-fleet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Capstone — Managing a Simulated Fleet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mixed-questions-across-all-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mixed questions across all levels
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-coding-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical coding questions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical coding questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#render-a-config-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Render a config template
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-dynamic-inventory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A dynamic inventory
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cheat-sheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheat Sheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../level-1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 1 · Ansible Foundations
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Level 1 · Ansible Foundations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/01-what-ansible-is/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · What Ansible Is and How It Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/02-adhoc-and-docs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Ad-Hoc Commands, Modules and ansible-doc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/03-inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 · Inventory: Hosts, Groups and Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/04-playbook-anatomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · Playbook Anatomy: Plays, Tasks and Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/05-idempotency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Idempotency, Changed and Check Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/06-variables-facts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · Variables and Facts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/07-conditionals-loops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 · Conditionals, Loops and Registered Results
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/08-templates-handlers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 · Templates and Handlers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/09-debugging-playbooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 · Debugging and Reading Failures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-1/10-project-baseline-playbook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 · Project — A Verified Baseline Playbook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../level-2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 2 · Structure and Safety
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Level 2 · Structure and Safety
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/01-roles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · Roles: Reusable Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/02-variable-precedence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Variable Precedence, Measured
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/03-jinja-filters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 · Jinja2 Filters and Expressions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/04-blocks-errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · Blocks, Errors and Rescue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/05-vault/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Ansible Vault and Secrets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/06-collections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · Collections, Galaxy and Dependencies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/07-tags-limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 · Tags, Limits and Targeting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/08-delegation-strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 · Delegation, Serial Batches and Strategies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/09-testing-ansible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 · Testing and Linting Ansible
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-2/10-project-tested-role/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 · Project — A Tested Role
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../level-3/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 3 · Extending Ansible
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Level 3 · Extending Ansible
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/01-custom-modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · Writing a Custom Module
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/02-filter-plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Filter and Lookup Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/03-dynamic-inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 · Dynamic Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/04-command-shell-pitfalls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · Command and Shell Without Breaking Idempotency
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/05-async-polling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Async Tasks and Polling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/06-performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · Performance: Forks, Pipelining and Facts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/07-rolling-updates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 · Rolling Updates and Failure Budgets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/08-state-and-drift/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 · State, Drift and Convergence
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/09-network-windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 · Network and Windows Targets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-3/10-project-custom-module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 · Project — A Tested Custom Module
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../level-4/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 4 · Operating Ansible
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Level 4 · Operating Ansible
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/01-automation-platform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 · Controllers, AWX and Execution Environments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/02-ansible-in-ci/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 · Ansible in CI/CD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/03-secrets-at-scale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 · Secrets and Credentials at Scale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/04-pull-mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 · Pull Mode and Bootstrap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/05-terraform-and-ansible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 · Terraform and Ansible Together
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/06-drift-audit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 · Auditing Drift with Check Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/07-incidents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 · Automation Incidents and Blast Radius
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/08-migration-antipatterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 · Migrating Scripts and Avoiding Anti-Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/09-governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 · Governance, Review and Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-4/10-capstone-fleet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 · Capstone — Managing a Simulated Fleet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quiz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Final Quiz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#level-1-ansible-foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 1 · Ansible Foundations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 1 · Ansible Foundations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-what-ansible-is-and-how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 · What Ansible Is and How It Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-ad-hoc-commands-modules-and-ansible-doc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 · Ad-Hoc Commands, Modules and ansible-doc
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-inventory-hosts-groups-and-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 · Inventory: Hosts, Groups and Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-playbook-anatomy-plays-tasks-and-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 · Playbook Anatomy: Plays, Tasks and Modules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-idempotency-changed-and-check-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 · Idempotency, changed and Check Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-variables-and-facts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 · Variables and Facts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-conditionals-loops-and-registered-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 · Conditionals, Loops and Registered Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08-templates-and-handlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08 · Templates and Handlers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-debugging-and-reading-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 · Debugging and Reading Failures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-project-a-verified-baseline-playbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Project — A Verified Baseline Playbook
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-2-structure-and-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 2 · Structure and Safety
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 2 · Structure and Safety">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-roles-reusable-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 · Roles: Reusable Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-variable-precedence-measured" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 · Variable Precedence, Measured
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-jinja2-filters-and-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 · Jinja2 Filters and Expressions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-blocks-errors-and-rescue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 · Blocks, Errors and Rescue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-ansible-vault-and-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 · Ansible Vault and Secrets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-collections-galaxy-and-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 · Collections, Galaxy and Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-tags-limits-and-targeting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 · Tags, Limits and Targeting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08-delegation-serial-batches-and-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08 · Delegation, Serial Batches and Strategies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-testing-and-linting-ansible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 · Testing and Linting Ansible
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-project-a-tested-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Project — A Tested Role
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-3-extending-ansible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 3 · Extending Ansible
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 3 · Extending Ansible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-writing-a-custom-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 · Writing a Custom Module
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-filter-and-lookup-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 · Filter and Lookup Plugins
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-dynamic-inventory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 · Dynamic Inventory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-command-and-shell-without-breaking-idempotency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 · command and shell Without Breaking Idempotency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-async-tasks-and-polling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 · Async Tasks and Polling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-performance-forks-pipelining-and-facts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 · Performance: Forks, Pipelining and Facts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-rolling-updates-and-failure-budgets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 · Rolling Updates and Failure Budgets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08-state-drift-and-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08 · State, Drift and Convergence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-network-and-windows-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 · Network and Windows Targets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-project-a-tested-custom-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Project — A Tested Custom Module
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-4-operating-ansible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 4 · Operating Ansible
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level 4 · Operating Ansible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-controllers-awx-and-execution-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 · Controllers, AWX and Execution Environments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-ansible-in-cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 · Ansible in CI/CD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-secrets-and-credentials-at-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 · Secrets and Credentials at Scale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-pull-mode-and-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 · Pull Mode and Bootstrap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05-terraform-and-ansible-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 · Terraform and Ansible Together
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06-auditing-drift-with-check-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 · Auditing Drift with Check Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07-automation-incidents-and-blast-radius" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 · Automation Incidents and Blast Radius
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08-migrating-scripts-and-avoiding-anti-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08 · Migrating Scripts and Avoiding Anti-Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09-governance-review-and-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 · Governance, Review and Standards
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-capstone-managing-a-simulated-fleet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 · Capstone — Managing a Simulated Fleet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mixed-questions-across-all-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mixed questions across all levels
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-coding-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical coding questions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical coding questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#render-a-config-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Render a config template
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-dynamic-inventory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A dynamic inventory
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+  
+
+
+<h1 id="ansible-interview-questions-and-answers">Ansible Interview Questions and Answers<a class="headerlink" href="#ansible-interview-questions-and-answers" title="Permanent link">&para;</a></h1>
+<p><strong>179 questions</strong> with the correct answer and a short explanation, organised from beginner (Level 1) to advanced (Level 4). Every question comes from a lesson in the free Ansible Mastery Path, so you can open the lesson to go deeper.</p>
+<div class="admonition tip">
+<p class="admonition-title">Practise, don't just read</p>
+<p>Each lesson also ends with an interactive quiz, and the <a href="../quiz/">final quiz</a> tests all four levels. Try to answer each question below before reading the answer.</p>
+</div>
+<h2 id="level-1-ansible-foundations">Level 1 · Ansible Foundations<a class="headerlink" href="#level-1-ansible-foundations" title="Permanent link">&para;</a></h2>
+<h3 id="01-what-ansible-is-and-how-it-works"><a href="../level-1/01-what-ansible-is/">01 · What Ansible Is and How It Works</a><a class="headerlink" href="#01-what-ansible-is-and-how-it-works" title="Permanent link">&para;</a></h3>
+<p><strong>Q1.</strong> How does Ansible reach managed nodes?</p>
+<p><strong>Answer:</strong> Agentless: over SSH, copying a module, running it, collecting JSON and deleting it (no Ansible daemon)</p>
+<p>Managed nodes need sshd and Python.</p>
+<p><strong>Q2.</strong> Is Ansible push or pull?</p>
+<p><strong>Answer:</strong> Push: the control node decides when to run and reaches out</p>
+<p>Contrast with pull tools where agents fetch config.</p>
+<p><strong>Q3.</strong> What runs Ansible?</p>
+<p><strong>Answer:</strong> The control node (a laptop or CI runner) with inventory, playbook and roles</p>
+<p>ansible-playbook is the only program.</p>
+<p><strong>Q4.</strong> What caveat applies to 'declarative' tasks?</p>
+<p><strong>Answer:</strong> Tasks say what should be true, but modules like command can't know state, so idempotency is on you</p>
+<p>It's declarative-ish.</p>
+<h3 id="02-ad-hoc-commands-modules-and-ansible-doc"><a href="../level-1/02-adhoc-and-docs/">02 · Ad-Hoc Commands, Modules and <code>ansible-doc</code></a><a class="headerlink" href="#02-ad-hoc-commands-modules-and-ansible-doc" title="Permanent link">&para;</a></h3>
+<p><strong>Q5.</strong> What is an ad-hoc command?</p>
+<p><strong>Answer:</strong> One module run on one or many hosts, e.g. ansible web1 -i hosts.ini -m command -a "echo hello"</p>
+<p>-m selects the module and -a its arguments.</p>
+<p><strong>Q6.</strong> Why did <code>echo hello</code> via the command module report CHANGED?</p>
+<p><strong>Answer:</strong> The command module can't know whether anything changed</p>
+<p>Idempotency is on you with command/shell.</p>
+<p><strong>Q7.</strong> What should module names be written as?</p>
+<p><strong>Answer:</strong> Fully qualified collection names such as ansible.builtin.copy</p>
+<p>FQCN avoids ambiguity.</p>
+<p><strong>Q8.</strong> Which tool documents a module?</p>
+<p><strong>Answer:</strong> ansible-doc</p>
+<p>It shows parameters and examples offline.</p>
+<h3 id="03-inventory-hosts-groups-and-variables"><a href="../level-1/03-inventory/">03 · Inventory: Hosts, Groups and Variables</a><a class="headerlink" href="#03-inventory-hosts-groups-and-variables" title="Permanent link">&para;</a></h3>
+<p><strong>Q9.</strong> What does inventory define?</p>
+<p><strong>Answer:</strong> What exists: hosts, groups and variables</p>
+<p>INI is compact; YAML suits lists and dictionaries.</p>
+<p><strong>Q10.</strong> What does <code>[prod:children]</code> with web and db mean?</p>
+<p><strong>Answer:</strong> Group prod contains the groups web and db</p>
+<p>ansible-inventory --graph confirms the tree.</p>
+<p><strong>Q11.</strong> How do you inspect how Ansible understood inventory?</p>
+<p><strong>Answer:</strong> ansible-inventory --graph and --host &lt;name&gt;</p>
+<p>Inspect before you trust.</p>
+<p><strong>Q12.</strong> Group variable http_port=80 on [web] and host http_port=8081 on web1: what does web1 get?</p>
+<p><strong>Answer:</strong> 8081: host variables override group variables</p>
+<p>The --host output showed 8081 for web1 and 80 for web2.</p>
+<h3 id="04-playbook-anatomy-plays-tasks-and-modules"><a href="../level-1/04-playbook-anatomy/">04 · Playbook Anatomy: Plays, Tasks and Modules</a><a class="headerlink" href="#04-playbook-anatomy-plays-tasks-and-modules" title="Permanent link">&para;</a></h3>
+<p><strong>Q13.</strong> What is a playbook?</p>
+<p><strong>Answer:</strong> A YAML list of plays, each mapping hosts to a list of tasks</p>
+<p>Tasks run in order on each host.</p>
+<p><strong>Q14.</strong> What does gather_facts do?</p>
+<p><strong>Answer:</strong> Runs setup to collect host facts before tasks</p>
+<p>It can be disabled to save time.</p>
+<p><strong>Q15.</strong> Why give tasks names?</p>
+<p><strong>Answer:</strong> They appear in output and make runs readable</p>
+<p>Unnamed tasks print module names only.</p>
+<p><strong>Q16.</strong> What's a common YAML pitfall?</p>
+<p><strong>Answer:</strong> Indentation and unquoted special values like colons or booleans</p>
+<p>Quote values that YAML might misread.</p>
+<h3 id="05-idempotency-changed-and-check-mode"><a href="../level-1/05-idempotency/">05 · Idempotency, <code>changed</code> and Check Mode</a><a class="headerlink" href="#05-idempotency-changed-and-check-mode" title="Permanent link">&para;</a></h3>
+<p><strong>Q17.</strong> What should the recap show on a repeat run of a converged playbook?</p>
+<p><strong>Answer:</strong> changed=0</p>
+<p>The recap is the instrument for idempotency.</p>
+<p><strong>Q18.</strong> Why does an unguarded command task report changed every run?</p>
+<p><strong>Answer:</strong> command/shell can't know state</p>
+<p>State-aware modules like file and copy report ok on the second run.</p>
+<p><strong>Q19.</strong> How does <code>creates:</code> help a command task?</p>
+<p><strong>Answer:</strong> If the file exists the command is skipped, making it idempotent</p>
+<p>A condition makes the command safe to repeat.</p>
+<p><strong>Q20.</strong> What does <code>changed_when: false</code> mean on a read-only command?</p>
+<p><strong>Answer:</strong> Reading never changes anything, so never report changed</p>
+<p>changed_when and failed_when interpret results.</p>
+<h3 id="06-variables-and-facts"><a href="../level-1/06-variables-facts/">06 · Variables and Facts</a><a class="headerlink" href="#06-variables-and-facts" title="Permanent link">&para;</a></h3>
+<p><strong>Q21.</strong> What does <code>{{ missing | default('fallback') }}</code> do when undefined?</p>
+<p><strong>Answer:</strong> Gives 'fallback'; without default an undefined variable is an error</p>
+<p>default makes optional values safe.</p>
+<p><strong>Q22.</strong> What beats every other variable source?</p>
+<p><strong>Answer:</strong> Extra vars (-e)</p>
+<p>They override even set_fact.</p>
+<p><strong>Q23.</strong> What does set_fact do?</p>
+<p><strong>Answer:</strong> Creates or changes a variable for the rest of the play for that host, higher in precedence than play vars</p>
+<p>Shown by the debug before and after.</p>
+<p><strong>Q24.</strong> Why quote a value starting with {{ in YAML?</p>
+<p><strong>Answer:</strong> Otherwise YAML misreads it</p>
+<p>Strings with a leading {{ must be quoted.</p>
+<h3 id="07-conditionals-loops-and-registered-results"><a href="../level-1/07-conditionals-loops/">07 · Conditionals, Loops and Registered Results</a><a class="headerlink" href="#07-conditionals-loops-and-registered-results" title="Permanent link">&para;</a></h3>
+<p><strong>Q25.</strong> How is a task skipped by <code>when</code> reported?</p>
+<p><strong>Answer:</strong> skipping, and not counted as changed</p>
+<p>when takes a Jinja2 expression without {{ }}.</p>
+<p><strong>Q26.</strong> How is <code>when</code> evaluated on a looped task?</p>
+<p><strong>Answer:</strong> Per item</p>
+<p>For example when: item.admin.</p>
+<p><strong>Q27.</strong> What does loop_control: {label: ...} do?</p>
+<p><strong>Answer:</strong> Shortens the output label per item</p>
+<p>It prints item.name instead of the whole dict.</p>
+<p><strong>Q28.</strong> What does <code>ansible_facts.os_family == 'Debian'</code> target?</p>
+<p><strong>Answer:</strong> Debian-family hosts only</p>
+<p>On macOS os_family was Darwin, so it skipped.</p>
+<h3 id="08-templates-and-handlers"><a href="../level-1/08-templates-handlers/">08 · Templates and Handlers</a><a class="headerlink" href="#08-templates-and-handlers" title="Permanent link">&para;</a></h3>
+<p><strong>Q29.</strong> What is a template?</p>
+<p><strong>Answer:</strong> A Jinja2 file (.j2) rendered per host into a config file</p>
+<p>{{ }} prints values; {% if %} and {% for %} control flow.</p>
+<p><strong>Q30.</strong> Why add a managed-by header?</p>
+<p><strong>Answer:</strong> So people know hand edits will be reverted</p>
+<p>Also keep logic out of templates.</p>
+<p><strong>Q31.</strong> What does <code>validate:</code> on template or copy do?</p>
+<p><strong>Answer:</strong> Checks the file before it replaces the live one</p>
+<p>For example validating a config with the service's own checker.</p>
+<p><strong>Q32.</strong> When do handlers fire?</p>
+<p><strong>Answer:</strong> Once, at the end of the play, only if a notifying task changed</p>
+<p>flush_handlers forces them earlier.</p>
+<h3 id="09-debugging-and-reading-failures"><a href="../level-1/09-debugging-playbooks/">09 · Debugging and Reading Failures</a><a class="headerlink" href="#09-debugging-and-reading-failures" title="Permanent link">&para;</a></h3>
+<p><strong>Q33.</strong> How should you read an Ansible failure?</p>
+<p><strong>Answer:</strong> Top-down: the task, host, module, then what/why/where (file:line:column)</p>
+<p>The origin shows the failing line.</p>
+<p><strong>Q34.</strong> What does <code>'x' is undefined</code> usually mean, and a first step?</p>
+<p><strong>Answer:</strong> Missing variable, typo, scope or ungathered fact; use debug: var=x</p>
+<p>Check inventory and precedence.</p>
+<p><strong>Q35.</strong> What does UNREACHABLE point at?</p>
+<p><strong>Answer:</strong> The connection: SSH, host key, network or interpreter; use -vvv and try ssh by hand</p>
+<p>FAILED with rc means the command ran and failed.</p>
+<p><strong>Q36.</strong> How do you inspect a module's arguments?</p>
+<p><strong>Answer:</strong> ansible-doc -s &lt;module&gt;</p>
+<p>For 'Unsupported parameters' errors.</p>
+<h3 id="10-project-a-verified-baseline-playbook"><a href="../level-1/10-project-baseline-playbook/">10 · Project — A Verified Baseline Playbook</a><a class="headerlink" href="#10-project-a-verified-baseline-playbook" title="Permanent link">&para;</a></h3>
+<p><strong>Q37.</strong> Why was the first run ok=6 and the second ok=5 changed=0?</p>
+<p><strong>Answer:</strong> The handler ran once on the first run; the second run changed nothing so no handler fired</p>
+<p>Convergence: zero changes on repeat.</p>
+<p><strong>Q38.</strong> What does blockinfile manage?</p>
+<p><strong>Answer:</strong> A block of lines between marker comments, e.g. two sysctl settings</p>
+<p>lineinfile edits a single line like PermitRootLogin.</p>
+<p><strong>Q39.</strong> What did the drift test show?</p>
+<p><strong>Answer:</strong> Hand edits (a bad line, a changed mode) were detected and corrected by re-running the playbook</p>
+<p>The tests call the real ansible-playbook.</p>
+<p><strong>Q40.</strong> How were the 'servers' simulated?</p>
+<p><strong>Answer:</strong> Local directories (node1, node2) with the local connection, so it ran on a laptop</p>
+<p>Tests verified results with pytest.</p>
+<h2 id="level-2-structure-and-safety">Level 2 · Structure and Safety<a class="headerlink" href="#level-2-structure-and-safety" title="Permanent link">&para;</a></h2>
+<h3 id="01-roles-reusable-structure"><a href="../level-2/01-roles/">01 · Roles: Reusable Structure</a><a class="headerlink" href="#01-roles-reusable-structure" title="Permanent link">&para;</a></h3>
+<p><strong>Q41.</strong> What does a role package?</p>
+<p><strong>Answer:</strong> Everything to configure one thing: tasks, default variables, templates, files, handlers</p>
+<p>ansible-galaxy role init scaffolds the layout.</p>
+<p><strong>Q42.</strong> Defaults versus vars in a role?</p>
+<p><strong>Answer:</strong> defaults/main.yml holds variables users are meant to override (lowest precedence); vars/main.yml holds internal constants (high precedence)</p>
+<p>defaults are the role's public interface.</p>
+<p><strong>Q43.</strong> Which file is the role's entry point?</p>
+<p><strong>Answer:</strong> tasks/main.yml</p>
+<p>meta/main.yml holds author, platforms and dependencies.</p>
+<p><strong>Q44.</strong> Why validate inputs with assert at the start of the role?</p>
+<p><strong>Answer:</strong> Fail early with a clear message (e.g. port 1–65535) instead of failing deep inside later tasks</p>
+<p>fail_msg explains the expected range.</p>
+<h3 id="02-variable-precedence-measured"><a href="../level-2/02-variable-precedence/">02 · Variable Precedence, Measured</a><a class="headerlink" href="#02-variable-precedence-measured" title="Permanent link">&para;</a></h3>
+<p><strong>Q45.</strong> Which source wins above all others?</p>
+<p><strong>Answer:</strong> -e extra vars</p>
+<p>They beat even set_fact.</p>
+<p><strong>Q46.</strong> Which source has the lowest precedence?</p>
+<p><strong>Answer:</strong> Role defaults/main.yml</p>
+<p>That's why defaults are safe to override.</p>
+<p><strong>Q47.</strong> Host versus group variables?</p>
+<p><strong>Answer:</strong> Host beats group, and a specific group beats all</p>
+<p>At both inventory levels.</p>
+<p><strong>Q48.</strong> How was the order established?</p>
+<p><strong>Answer:</strong> By measurement: a script generated a fresh project per trial, ran the playbook and read which source's value won</p>
+<p>14 sources ranked by experiment.</p>
+<h3 id="03-jinja2-filters-and-expressions"><a href="../level-2/03-jinja-filters/">03 · Jinja2 Filters and Expressions</a><a class="headerlink" href="#03-jinja2-filters-and-expressions" title="Permanent link">&para;</a></h3>
+<p><strong>Q49.</strong> What does <code>servers | selectattr('port','gt',100) | map(attribute='name') | list</code> return for ports 80, 8080, 443?</p>
+<p><strong>Answer:</strong> [b, c]</p>
+<p>Ports above 100: b and c.</p>
+<p><strong>Q50.</strong> Why end with <code>| list</code> after map or selectattr?</p>
+<p><strong>Answer:</strong> They return generators; list (or join) materialises the result</p>
+<p>Otherwise you print a generator object.</p>
+<p><strong>Q51.</strong> Shallow versus recursive combine of {a:1,b:{c:2,d:3}} with {b:{c:9},e:5}?</p>
+<p><strong>Answer:</strong> Shallow replaces b entirely ({c:9}); recursive=True merges ({c:9, d:3})</p>
+<p>Variables from different layers don't merge on their own.</p>
+<p><strong>Q52.</strong> What does <code>'web-01.example.com' | regex_replace('^(\w+)-(\d+).*', '\2:\1')</code> give?</p>
+<p><strong>Answer:</strong> 01:web</p>
+<p>Groups swapped; mind the backslashes in YAML.</p>
+<h3 id="04-blocks-errors-and-rescue"><a href="../level-2/04-blocks-errors/">04 · Blocks, Errors and Rescue</a><a class="headerlink" href="#04-blocks-errors-and-rescue" title="Permanent link">&para;</a></h3>
+<p><strong>Q53.</strong> What happens by default when a task fails on a host?</p>
+<p><strong>Answer:</strong> Ansible stops that host's remaining tasks and continues with other hosts</p>
+<p>Blocks, rescue and always change that.</p>
+<p><strong>Q54.</strong> What do block, rescue and always do?</p>
+<p><strong>Answer:</strong> block groups tasks; on failure the rest are skipped and rescue runs; always runs regardless</p>
+<p>In the example 'never reached' was skipped.</p>
+<p><strong>Q55.</strong> Is rescue an automatic rollback?</p>
+<p><strong>Answer:</strong> No: it runs the tasks you wrote, which must themselves be idempotent and safe</p>
+<p>A failing rescue task fails the host, but always still runs.</p>
+<p><strong>Q56.</strong> What does ansible_failed_task give inside rescue?</p>
+<p><strong>Answer:</strong> Details of the failed task (name, result)</p>
+<p>Use it for a precise rollback message.</p>
+<h3 id="05-ansible-vault-and-secrets"><a href="../level-2/05-vault/">05 · Ansible Vault and Secrets</a><a class="headerlink" href="#05-ansible-vault-and-secrets" title="Permanent link">&para;</a></h3>
+<p><strong>Q57.</strong> What does an encrypted vault file start with?</p>
+<p><strong>Answer:</strong> $ANSIBLE_VAULT;1.1;AES256 followed by hex ciphertext</p>
+<p>Encrypted with ansible-vault encrypt.</p>
+<p><strong>Q58.</strong> Does encrypting the same content twice give the same ciphertext?</p>
+<p><strong>Answer:</strong> No: ciphertext differs each time</p>
+<p>Random salt is used.</p>
+<p><strong>Q59.</strong> What happens with a wrong vault password?</p>
+<p><strong>Answer:</strong> Decryption failed (no vault secrets were found that could decrypt)</p>
+<p>No secret supplied gives a different error.</p>
+<p><strong>Q60.</strong> What does ansible-vault rekey do?</p>
+<p><strong>Answer:</strong> Changes the password without changing the contents</p>
+<p>Use --vault-password-file.</p>
+<h3 id="06-collections-galaxy-and-dependencies"><a href="../level-2/06-collections/">06 · Collections, Galaxy and Dependencies</a><a class="headerlink" href="#06-collections-galaxy-and-dependencies" title="Permanent link">&para;</a></h3>
+<p><strong>Q61.</strong> What does ansible-core contain?</p>
+<p><strong>Answer:</strong> The engine and ansible.builtin modules and plugins; everything else lives in collections</p>
+<p>71 builtin modules on the lesson's install.</p>
+<p><strong>Q62.</strong> What are the parts of a fully qualified collection name?</p>
+<p><strong>Answer:</strong> namespace.collection.plugin, e.g. ansible.utils.ipaddr</p>
+<p>Install collections via ansible-galaxy.</p>
+<p><strong>Q63.</strong> What happens with an unknown module/action?</p>
+<p><strong>Answer:</strong> The whole play aborts at load time; ignore_errors doesn't help</p>
+<p>Resolution errors are precise.</p>
+<p><strong>Q64.</strong> How do you pin collection versions for a project?</p>
+<p><strong>Answer:</strong> A requirements.yml file installed with ansible-galaxy</p>
+<p>Dependencies should be reproducible.</p>
+<h3 id="07-tags-limits-and-targeting"><a href="../level-2/07-tags-limits/">07 · Tags, Limits and Targeting</a><a class="headerlink" href="#07-tags-limits-and-targeting" title="Permanent link">&para;</a></h3>
+<p><strong>Q65.</strong> What does <code>--tags configure</code> run?</p>
+<p><strong>Answer:</strong> configure tasks plus tasks tagged always</p>
+<p>always runs unless skipped.</p>
+<p><strong>Q66.</strong> What does a task tagged <code>never</code> do with no options?</p>
+<p><strong>Answer:</strong> It doesn't run unless asked via its other tag</p>
+<p>--tags debug_only runs it.</p>
+<p><strong>Q67.</strong> Which tasks run with no options?</p>
+<p><strong>Answer:</strong> Untagged and tagged tasks alike, except those tagged never</p>
+<p>install, configure, always and untagged ran.</p>
+<p><strong>Q68.</strong> What does --limit do?</p>
+<p><strong>Answer:</strong> Restricts which hosts the play targets</p>
+<p>Combine with tags and check mode to target one change on one host.</p>
+<h3 id="08-delegation-serial-batches-and-strategies"><a href="../level-2/08-delegation-strategies/">08 · Delegation, Serial Batches and Strategies</a><a class="headerlink" href="#08-delegation-serial-batches-and-strategies" title="Permanent link">&para;</a></h3>
+<p><strong>Q69.</strong> What does delegate_to do?</p>
+<p><strong>Answer:</strong> Runs the task on another host while keeping the original host's variable context</p>
+<p>For example draining a host from a load balancer via lb1.</p>
+<p><strong>Q70.</strong> What's a delegation gotcha?</p>
+<p><strong>Answer:</strong> Parallel delegated tasks against one host can race; facts attach to the delegated host only with delegate_facts</p>
+<p>command isn't a shell, so $(...) printed literally.</p>
+<p><strong>Q71.</strong> What does run_once do?</p>
+<p><strong>Answer:</strong> Runs a task on one host in the batch instead of every host</p>
+<p>Useful for migrations.</p>
+<p><strong>Q72.</strong> Why use serial batches?</p>
+<p><strong>Answer:</strong> Roll changes through hosts in small groups, with max_fail_percentage to stop on problems</p>
+<p>They limit blast radius.</p>
+<h3 id="09-testing-and-linting-ansible"><a href="../level-2/09-testing-ansible/">09 · Testing and Linting Ansible</a><a class="headerlink" href="#09-testing-and-linting-ansible" title="Permanent link">&para;</a></h3>
+<p><strong>Q73.</strong> What does ansible-playbook --syntax-check do?</p>
+<p><strong>Answer:</strong> Parses the playbook without connecting, catching YAML and structural errors</p>
+<p>The first rung of the testing ladder.</p>
+<p><strong>Q74.</strong> What does ansible-lint's <code>no-changed-when</code> flag?</p>
+<p><strong>Answer:</strong> command/shell without changed_when, which breaks idempotency reporting</p>
+<p>Others: fqcn, name, no-free-form, package-latest.</p>
+<p><strong>Q75.</strong> Why does <code>state: latest</code> get flagged?</p>
+<p><strong>Answer:</strong> It makes runs non-reproducible</p>
+<p>Pin versions or use present.</p>
+<p><strong>Q76.</strong> What are lint profiles?</p>
+<p><strong>Answer:</strong> Rule sets from basic to production that a playbook can meet</p>
+<p>The fixed playbook passed 'production'.</p>
+<h3 id="10-project-a-tested-role"><a href="../level-2/10-project-tested-role/">10 · Project — A Tested Role</a><a class="headerlink" href="#10-project-a-tested-role" title="Permanent link">&para;</a></h3>
+<p><strong>Q77.</strong> What does the webapp role's interface consist of?</p>
+<p><strong>Answer:</strong> defaults/main.yml variables (port, workers, root), with internal constants in vars/main.yml, documented in a README</p>
+<p>The role has validation and a handler.</p>
+<p><strong>Q78.</strong> What does the 'idempotent' test assert?</p>
+<p><strong>Answer:</strong> A second run exits 0 and changed=0 for every host</p>
+<p>Using real ansible-playbook runs.</p>
+<p><strong>Q79.</strong> What does the 'invalid port fails before changing anything' test show?</p>
+<p><strong>Answer:</strong> Validation with assert stops early with a non-zero exit and a clear message</p>
+<p>webapp_port=70000 is rejected.</p>
+<p><strong>Q80.</strong> What does the check-mode test assert?</p>
+<p><strong>Answer:</strong> --check exits 0 and writes nothing (the output directory isn't created)</p>
+<p>Nine tests all passed.</p>
+<h2 id="level-3-extending-ansible">Level 3 · Extending Ansible<a class="headerlink" href="#level-3-extending-ansible" title="Permanent link">&para;</a></h2>
+<h3 id="01-writing-a-custom-module"><a href="../level-3/01-custom-modules/">01 · Writing a Custom Module</a><a class="headerlink" href="#01-writing-a-custom-module" title="Permanent link">&para;</a></h3>
+<p><strong>Q81.</strong> When should you write a custom module?</p>
+<p><strong>Answer:</strong> When no module does what you need and command would be fragile</p>
+<p>A module is a Python program.</p>
+<p><strong>Q82.</strong> How does a module report results?</p>
+<p><strong>Answer:</strong> exit_json on success and fail_json on failure</p>
+<p>Plus an argument spec, check mode and diff support.</p>
+<p><strong>Q83.</strong> Why support check mode in a module?</p>
+<p><strong>Answer:</strong> So --check reports what would change without changing it</p>
+<p>Be honest about 'changed'.</p>
+<p><strong>Q84.</strong> What's the argument spec?</p>
+<p><strong>Answer:</strong> A declaration of parameters, types, defaults and required fields that Ansible validates</p>
+<p>It makes invalid input fail clearly.</p>
+<h3 id="02-filter-and-lookup-plugins"><a href="../level-3/02-filter-plugins/">02 · Filter and Lookup Plugins</a><a class="headerlink" href="#02-filter-and-lookup-plugins" title="Permanent link">&para;</a></h3>
+<p><strong>Q85.</strong> What is a filter plugin?</p>
+<p><strong>Answer:</strong> A Python file with a FilterModule class whose filters() returns a dict of names to functions</p>
+<p>Placed in filter_plugins/ next to the playbook or inside a role/collection.</p>
+<p><strong>Q86.</strong> Which design points matter?</p>
+<p><strong>Answer:</strong> Pure functions, native return types, validated inputs raising AnsibleFilterError, no mutation of arguments, documentation</p>
+<p>mask_secrets returns a copy.</p>
+<p><strong>Q87.</strong> What do lookups do versus filters?</p>
+<p><strong>Answer:</strong> Lookups fetch data from outside the play (file, environment); filters transform data inside expressions</p>
+<p>The lesson wrote an envfile lookup.</p>
+<p><strong>Q88.</strong> What does the mask_secrets filter mask?</p>
+<p><strong>Answer:</strong> Values whose keys look sensitive (password, secret, token)</p>
+<p>Including nested dictionaries.</p>
+<h3 id="03-dynamic-inventory"><a href="../level-3/03-dynamic-inventory/">03 · Dynamic Inventory</a><a class="headerlink" href="#03-dynamic-inventory" title="Permanent link">&para;</a></h3>
+<p><strong>Q89.</strong> Why do static inventories rot?</p>
+<p><strong>Answer:</strong> Servers are created and destroyed by autoscalers faster than a hand-edited file can track</p>
+<p>Use a source of truth like a CMDB.</p>
+<p><strong>Q90.</strong> What must an inventory script print for --list?</p>
+<p><strong>Answer:</strong> Valid JSON including _meta hostvars, exit code 0; it also answers --host NAME</p>
+<p>_meta avoids one call per host.</p>
+<p><strong>Q91.</strong> In the CSV example, which groups does web-01 belong to?</p>
+<p><strong>Answer:</strong> web (its role) and prod (its env)</p>
+<p>Each row becomes a host in two groups.</p>
+<p><strong>Q92.</strong> What are the two ways shown to build dynamic inventory?</p>
+<p><strong>Answer:</strong> An inventory script and an inventory plugin</p>
+<p>Plugins can also cache results.</p>
+<h3 id="04-command-and-shell-without-breaking-idempotency"><a href="../level-3/04-command-shell-pitfalls/">04 · <code>command</code> and <code>shell</code> Without Breaking Idempotency</a><a class="headerlink" href="#04-command-and-shell-without-breaking-idempotency" title="Permanent link">&para;</a></h3>
+<p><strong>Q93.</strong> What can <code>command</code> NOT do?</p>
+<p><strong>Answer:</strong> Pipes, redirection, &amp;&amp;, $(...) and globbing, since there's no shell</p>
+<p>shell runs through /bin/sh.</p>
+<p><strong>Q94.</strong> What is the safest form of command?</p>
+<p><strong>Answer:</strong> argv: a list where each element is one argument with no shell or splitting</p>
+<p><code>argv: [echo, "a b", "c;d"]</code> printed a b c;d.</p>
+<p><strong>Q95.</strong> How do you prevent injection through variables in shell?</p>
+<p><strong>Answer:</strong> The quote filter: <code>echo {{ evil | quote }}</code> treats it as data</p>
+<p>Without it <code>ok; echo INJECTED</code> ran a second command.</p>
+<p><strong>Q96.</strong> What are raw and script for?</p>
+<p><strong>Answer:</strong> raw sends text over SSH without Python (bootstrapping); script copies and runs a local script</p>
+<p>Last-resort tools.</p>
+<h3 id="05-async-tasks-and-polling"><a href="../level-3/05-async-polling/">05 · Async Tasks and Polling</a><a class="headerlink" href="#05-async-tasks-and-polling" title="Permanent link">&para;</a></h3>
+<p><strong>Q97.</strong> Why use async?</p>
+<p><strong>Answer:</strong> A long task shouldn't hold the connection open for its entire life (large downloads, long jobs)</p>
+<p>The task is started and checked later.</p>
+<p><strong>Q98.</strong> What does <code>poll: 0</code> mean?</p>
+<p><strong>Answer:</strong> Fire and forget: don't wait for the job</p>
+<p>Check later with async_status.</p>
+<p><strong>Q99.</strong> What does async_status do?</p>
+<p><strong>Answer:</strong> Checks a started job's status, typically with retries until finished</p>
+<p>Use <code>until</code> with retries and delay.</p>
+<p><strong>Q100.</strong> What does <code>async:</code> set?</p>
+<p><strong>Answer:</strong> The maximum time the job may run</p>
+<p>poll sets how often Ansible checks.</p>
+<h3 id="06-performance-forks-pipelining-and-facts"><a href="../level-3/06-performance/">06 · Performance: Forks, Pipelining and Facts</a><a class="headerlink" href="#06-performance-forks-pipelining-and-facts" title="Permanent link">&para;</a></h3>
+<p><strong>Q101.</strong> What does <code>forks</code> control, and what's the default?</p>
+<p><strong>Answer:</strong> Parallel worker processes handling hosts; default 5</p>
+<p>Measured: 1 fork 50.1 s, 5 forks 11.1 s, 10 forks 6.6 s, 20 forks 4.5 s on 20 hosts.</p>
+<p><strong>Q102.</strong> When do more forks stop helping?</p>
+<p><strong>Answer:</strong> When forks reaches the host count; each fork is also a Python process using memory</p>
+<p>Scaling is near linear until then.</p>
+<p><strong>Q103.</strong> What is gather_facts' hidden cost?</p>
+<p><strong>Answer:</strong> It runs the setup module on every host at the start of each play (about 2.3 s vs 0.4 s without, on 20 hosts)</p>
+<p>Turn it off or use gather_subset or fact caching.</p>
+<p><strong>Q104.</strong> What does the free strategy help with?</p>
+<p><strong>Answer:</strong> Slow hosts holding others up at each task under linear</p>
+<p>Under linear a slow host delays everyone per task.</p>
+<h3 id="07-rolling-updates-and-failure-budgets"><a href="../level-3/07-rolling-updates/">07 · Rolling Updates and Failure Budgets</a><a class="headerlink" href="#07-rolling-updates-and-failure-budgets" title="Permanent link">&para;</a></h3>
+<p><strong>Q105.</strong> What does <code>serial: [1, "50%", "100%"]</code> give on eight hosts?</p>
+<p><strong>Answer:</strong> Batches of 1, 4 and 3: a canary, then half, then the rest</p>
+<p>The first is the canary.</p>
+<p><strong>Q106.</strong> What's the principle 'drain first, re-enable last'?</p>
+<p><strong>Answer:</strong> Remove the host from rotation before changing it, and return it only after it passes the smoke test (always section)</p>
+<p>Capacity stays up.</p>
+<p><strong>Q107.</strong> What does 'roll back locally, then fail loudly' mean?</p>
+<p><strong>Answer:</strong> The rescue restores the previous version on that host, logs it, then fails the host so the batch is marked failed</p>
+<p>any_errors_fatal stops the rollout.</p>
+<p><strong>Q108.</strong> What's a failure budget?</p>
+<p><strong>Answer:</strong> How many failures a rollout tolerates (e.g. max_fail_percentage) before stopping</p>
+<p>A bad change is stopped early.</p>
+<h3 id="08-state-drift-and-convergence"><a href="../level-3/08-state-and-drift/">08 · State, Drift and Convergence</a><a class="headerlink" href="#08-state-drift-and-convergence" title="Permanent link">&para;</a></h3>
+<p><strong>Q109.</strong> Why does removing a task leave legacy.conf on the host?</p>
+<p><strong>Answer:</strong> Ansible keeps no state: it has no record that it created the file</p>
+<p>Terraform would remove it; Ansible does nothing.</p>
+<p><strong>Q110.</strong> What is Fix 1 for orphans?</p>
+<p><strong>Answer:</strong> An explicit removal task (state: absent), kept until every environment has run it</p>
+<p>Track it in a changelog.</p>
+<p><strong>Q111.</strong> What is Fix 2?</p>
+<p><strong>Answer:</strong> An allow-list purge: find files in a directory and delete everything not in the managed list</p>
+<p>In --check it showed what would be deleted without deleting.</p>
+<p><strong>Q112.</strong> What can happen when two tasks fight each other?</p>
+<p><strong>Answer:</strong> They keep undoing each other's change every run, so changed never reaches zero</p>
+<p>The flip.yml experiment.</p>
+<h3 id="09-network-and-windows-targets"><a href="../level-3/09-network-windows/">09 · Network and Windows Targets</a><a class="headerlink" href="#09-network-and-windows-targets" title="Permanent link">&para;</a></h3>
+<p><strong>Q113.</strong> What protocols manage Windows hosts?</p>
+<p><strong>Answer:</strong> WinRM or PSRP (the control node must be Linux or macOS)</p>
+<p>ansible.windows ships 81 modules in the lesson's version.</p>
+<p><strong>Q114.</strong> How honest is the lesson about verification?</p>
+<p><strong>Answer:</strong> No Windows host, network device or API was available, so nothing was executed against them; it's based on documentation and ansible-doc</p>
+<p>It says so up front.</p>
+<p><strong>Q115.</strong> What connection type do network devices use?</p>
+<p><strong>Answer:</strong> network_cli (and related connections from ansible.netcommon)</p>
+<p>The device has no Python to run modules on.</p>
+<p><strong>Q116.</strong> For non-Windows targets, which module should you use instead of win_copy?</p>
+<p><strong>Answer:</strong> ansible.builtin.copy</p>
+<p>As the module doc states.</p>
+<h3 id="10-project-a-tested-custom-module"><a href="../level-3/10-project-custom-module/">10 · Project — A Tested Custom Module</a><a class="headerlink" href="#10-project-a-tested-custom-module" title="Permanent link">&para;</a></h3>
+<p><strong>Q117.</strong> What does the kvfile module manage?</p>
+<p><strong>Answer:</strong> key=value entries: state present ensures one line for the key; absent removes it</p>
+<p>It preserves comments and unrelated settings.</p>
+<p><strong>Q118.</strong> Why a pure apply(lines, key, value, state) function?</p>
+<p><strong>Answer:</strong> Only it decides what changes, making it easy to test; main() wires AnsibleModule and file operations</p>
+<p>25 tests cover it.</p>
+<p><strong>Q119.</strong> What do check and diff mode do in kvfile?</p>
+<p><strong>Answer:</strong> Check never writes; diff returns before and after content</p>
+<p>Atomic writes avoid half-written files.</p>
+<p><strong>Q120.</strong> Which sequence of changed flags did the playbook show: set, set again, change to 8, remove?</p>
+<p><strong>Answer:</strong> [True, False, True, True]</p>
+<p>The second set was idempotent.</p>
+<h2 id="level-4-operating-ansible">Level 4 · Operating Ansible<a class="headerlink" href="#level-4-operating-ansible" title="Permanent link">&para;</a></h2>
+<h3 id="01-controllers-awx-and-execution-environments"><a href="../level-4/01-automation-platform/">01 · Controllers, AWX and Execution Environments</a><a class="headerlink" href="#01-controllers-awx-and-execution-environments" title="Permanent link">&para;</a></h3>
+<p><strong>Q121.</strong> What does a controller (AWX/AAP) add beyond ansible-playbook?</p>
+<p><strong>Answer:</strong> Projects, inventories, credentials, job templates, RBAC, scheduling, workflows, history/logging, API, and execution isolation</p>
+<p>For teams: who may run what against which hosts.</p>
+<p><strong>Q122.</strong> What is the most valuable credential feature?</p>
+<p><strong>Answer:</strong> Separation: an operator can use a credential to launch a job without ever seeing its secret</p>
+<p>Credentials are encrypted stores.</p>
+<p><strong>Q123.</strong> How do AWX and AAP relate?</p>
+<p><strong>Answer:</strong> AWX is the upstream open-source project; AAP is Red Hat's commercial product built on it</p>
+<p>The lesson notes nothing was installed or run.</p>
+<p><strong>Q124.</strong> What do execution environments provide?</p>
+<p><strong>Answer:</strong> Jobs run in separate containers rather than on a shared shell</p>
+<p>Built with ansible-builder.</p>
+<h3 id="02-ansible-in-cicd"><a href="../level-4/02-ansible-in-ci/">02 · Ansible in CI/CD</a><a class="headerlink" href="#02-ansible-in-cicd" title="Permanent link">&para;</a></h3>
+<p><strong>Q125.</strong> Why order the pipeline 'cheapest check first'?</p>
+<p><strong>Answer:</strong> Run the fastest, most likely-to-fail checks first to fail early</p>
+<p>syntax-check, lint, secret hygiene, converge, idempotence, check mode.</p>
+<p><strong>Q126.</strong> What does the idempotence step catch?</p>
+<p><strong>Answer:</strong> A non-idempotent task: the second run must report changed=0</p>
+<p>The nanosecond-writing task made changed=1 each run and failed the step.</p>
+<p><strong>Q127.</strong> What does the check-mode step verify?</p>
+<p><strong>Answer:</strong> --check reports changed=0, meaning no drift</p>
+<p>The last rung.</p>
+<p><strong>Q128.</strong> What does the secret hygiene step check?</p>
+<p><strong>Answer:</strong> Tasks using secret variables have no_log</p>
+<p>A custom linter (nologlint.py).</p>
+<h3 id="03-secrets-and-credentials-at-scale"><a href="../level-4/03-secrets-at-scale/">03 · Secrets and Credentials at Scale</a><a class="headerlink" href="#03-secrets-and-credentials-at-scale" title="Permanent link">&para;</a></h3>
+<p><strong>Q129.</strong> Why use an executable vault password script in CI?</p>
+<p><strong>Answer:</strong> A file is awkward; the script reads an environment variable and prints the password, failing closed if it's missing</p>
+<p>Missing variable: the script exits 1 and Ansible errors.</p>
+<p><strong>Q130.</strong> What does 'fails closed' mean here?</p>
+<p><strong>Answer:</strong> A missing secret stops the run rather than proceeding unprotected</p>
+<p>The error was 'Vault password script returned non-zero'.</p>
+<p><strong>Q131.</strong> How do you keep separate secrets per environment?</p>
+<p><strong>Answer:</strong> Multiple vault IDs: --vault-id dev@dev_pass.py --vault-id prod@prod_pass.py</p>
+<p>A single repository can hold both.</p>
+<p><strong>Q132.</strong> What does no_log protect?</p>
+<p><strong>Answer:</strong> Secrets appearing in task output and logs at run time</p>
+<p>Vault protects at rest; no_log protects output.</p>
+<h3 id="04-pull-mode-and-bootstrap"><a href="../level-4/04-pull-mode/">04 · Pull Mode and Bootstrap</a><a class="headerlink" href="#04-pull-mode-and-bootstrap" title="Permanent link">&para;</a></h3>
+<p><strong>Q133.</strong> What does ansible-pull do?</p>
+<p><strong>Answer:</strong> The host pulls its own configuration from Git and runs it locally</p>
+<p>It's the opposite of push.</p>
+<p><strong>Q134.</strong> What does 'only if changed' mean?</p>
+<p><strong>Answer:</strong> It runs the playbook only when the repository has new commits (unless forced)</p>
+<p>Saves work on unchanged repos.</p>
+<p><strong>Q135.</strong> Which hosts suit pull mode?</p>
+<p><strong>Answer:</strong> Many hosts that can't be reached from a controller, or that bootstrap themselves</p>
+<p>It scales without a push controller.</p>
+<p><strong>Q136.</strong> How does pull mode repair drift?</p>
+<p><strong>Answer:</strong> By re-running periodically (e.g. cron), reapplying the desired state</p>
+<p>The lesson showed drift repair.</p>
+<h3 id="05-terraform-and-ansible-together"><a href="../level-4/05-terraform-and-ansible/">05 · Terraform and Ansible Together</a><a class="headerlink" href="#05-terraform-and-ansible-together" title="Permanent link">&para;</a></h3>
+<p><strong>Q137.</strong> What is the division of labour?</p>
+<p><strong>Answer:</strong> Terraform for networks, VMs, load balancers, databases, DNS; Ansible for OS packages, config, users, services and deployment steps</p>
+<p>Neither tool is a secret store.</p>
+<p><strong>Q138.</strong> What if both tools create the same cloud resources?</p>
+<p><strong>Answer:</strong> They'll fight: pick one owner per resource</p>
+<p>The overlap is a trap.</p>
+<p><strong>Q139.</strong> Name a handoff pattern.</p>
+<p><strong>Answer:</strong> terraform output -json feeding an inventory, or an Ansible cloud inventory plugin (aws_ec2, azure_rm) querying tagged instances</p>
+<p>A community plugin can also read state.</p>
+<p><strong>Q140.</strong> How honest is the lesson?</p>
+<p><strong>Answer:</strong> Terraform wasn't installed, so no apply ran; the handoff logic was built and tested without state</p>
+<p>It states what wasn't run.</p>
+<h3 id="06-auditing-drift-with-check-mode"><a href="../level-4/06-drift-audit/">06 · Auditing Drift with Check Mode</a><a class="headerlink" href="#06-auditing-drift-with-check-mode" title="Permanent link">&para;</a></h3>
+<p><strong>Q141.</strong> Why not parse console output for drift?</p>
+<p><strong>Answer:</strong> It's for humans, mixing headers, items, diffs and warnings; use a callback plugin that writes JSON</p>
+<p>The driftreport plugin records changed results.</p>
+<p><strong>Q142.</strong> How does the runner audit drift?</p>
+<p><strong>Answer:</strong> Runs the playbook with --check --diff and the plugin enabled, then reports with exit codes</p>
+<p>Exit 0 means no drift.</p>
+<p><strong>Q143.</strong> What must you set to enable the callback plugin?</p>
+<p><strong>Answer:</strong> ANSIBLE_CALLBACKS_ENABLED=driftreport and ANSIBLE_CALLBACK_PLUGINS=&lt;dir&gt;</p>
+<p>The aggregate plugin needs enabling.</p>
+<p><strong>Q144.</strong> What is drift?</p>
+<p><strong>Answer:</strong> The difference between what automation says and what a machine actually has</p>
+<p>Check mode reveals it without changing anything.</p>
+<h3 id="07-automation-incidents-and-blast-radius"><a href="../level-4/07-incidents/">07 · Automation Incidents and Blast Radius</a><a class="headerlink" href="#07-automation-incidents-and-blast-radius" title="Permanent link">&para;</a></h3>
+<p><strong>Q145.</strong> Why does automation 'multiply mistakes as well as effort'?</p>
+<p><strong>Answer:</strong> One wrong hosts: pattern or bad variable changes every targeted host at once</p>
+<p>Control blast radius.</p>
+<p><strong>Q146.</strong> Which control addresses 'wrong target'?</p>
+<p><strong>Answer:</strong> A preflight guard, protected groups and limits</p>
+<p>The tested preflight.py computes the blast radius first.</p>
+<p><strong>Q147.</strong> Which control addresses 'batch too large'?</p>
+<p><strong>Answer:</strong> serial, failure budget and tested abort semantics</p>
+<p>200 hosts restarted at once is the example.</p>
+<p><strong>Q148.</strong> How can a scheduled drift repair cause an incident?</p>
+<p><strong>Answer:</strong> It reverts an emergency hot patch; audit drift before applying</p>
+<p>Review drift first.</p>
+<h3 id="08-migrating-scripts-and-avoiding-anti-patterns"><a href="../level-4/08-migration-antipatterns/">08 · Migrating Scripts and Avoiding Anti-Patterns</a><a class="headerlink" href="#08-migrating-scripts-and-avoiding-anti-patterns" title="Permanent link">&para;</a></h3>
+<p><strong>Q149.</strong> Why isn't the provisioning script idempotent?</p>
+<p><strong>Answer:</strong> mkdir fails if the directory exists (set -e exits 1), and &gt;&gt; appends port=8080 again on re-run</p>
+<p>It's correct only from one starting state and only once.</p>
+<p><strong>Q150.</strong> What does the playbook equivalent give?</p>
+<p><strong>Answer:</strong> State-aware modules that converge: reruns change nothing</p>
+<p>Compare repeated runs.</p>
+<p><strong>Q151.</strong> What happened without set -e after two runs?</p>
+<p><strong>Answer:</strong> app.conf contained port=8080 twice</p>
+<p>The script 'worked' silently wrong.</p>
+<p><strong>Q152.</strong> What's the migration lesson?</p>
+<p><strong>Answer:</strong> Don't just wrap scripts in shell tasks: use modules and desired state, or idempotency is still on you</p>
+<p>Avoid anti-patterns.</p>
+<h3 id="09-governance-review-and-standards"><a href="../level-4/09-governance/">09 · Governance, Review and Standards</a><a class="headerlink" href="#09-governance-review-and-standards" title="Permanent link">&para;</a></h3>
+<p><strong>Q153.</strong> Why write standards down and enforce them with tools?</p>
+<p><strong>Answer:</strong> With ten authors quality drifts; a rule with an automated check is enforced, one nobody can check is ignored</p>
+<p>Keep rules few and checkable.</p>
+<p><strong>Q154.</strong> Which standards belong in the one-pager?</p>
+<p><strong>Answer:</strong> Layout, naming, modules (FQCN), variables, safety (no_log, assert, serial), testing, pinned versions, documentation, release tagging</p>
+<p>Nine areas.</p>
+<p><strong>Q155.</strong> What are ansible-lint profiles?</p>
+<p><strong>Answer:</strong> Rule sets of increasing strictness (min, basic, moderate, safety, shared, production)</p>
+<p>Choose by risk.</p>
+<p><strong>Q156.</strong> What do warn_list and skip_list do?</p>
+<p><strong>Answer:</strong> warn_list reports without failing the build; skip_list isn't checked at all</p>
+<p>A ratchet tightens over time.</p>
+<h3 id="10-capstone-managing-a-simulated-fleet"><a href="../level-4/10-capstone-fleet/">10 · Capstone — Managing a Simulated Fleet</a><a class="headerlink" href="#10-capstone-managing-a-simulated-fleet" title="Permanent link">&para;</a></h3>
+<p><strong>Q157.</strong> What does the capstone fleet consist of?</p>
+<p><strong>Answer:</strong> A simulated 12-node fleet (web01–08, db01–04) with generated inventory and local connections</p>
+<p>No remote hosts, SSH or privilege escalation were involved.</p>
+<p><strong>Q158.</strong> What did the idempotence step assert?</p>
+<p><strong>Answer:</strong> Second run changed=0 on all 12 nodes</p>
+<p>After the first converge of changed=6 on every node.</p>
+<p><strong>Q159.</strong> What did the preflight step refuse?</p>
+<p><strong>Answer:</strong> <code>all</code> (exceeds --max-hosts 5) and a single production node without confirmation</p>
+<p>Blast-radius control.</p>
+<p><strong>Q160.</strong> What did the targeted repair do?</p>
+<p><strong>Answer:</strong> With --limit web03,db02,web07 only those three hosts ran and changed, leaving the rest untouched</p>
+<p>Then a clean audit exited 0.</p>
+<h2 id="mixed-questions-across-all-levels">Mixed questions across all levels<a class="headerlink" href="#mixed-questions-across-all-levels" title="Permanent link">&para;</a></h2>
+<p><strong>Q161.</strong> A playbook reports <code>changed=1</code> on every run for this task. Why?</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ansible.builtin.command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo hi</span>
+</code></pre></div>
+<p><strong>Answer:</strong> command can't know state, so it reports changed every time; add changed_when: false (read-only) or creates:/guards</p>
+<p>State-aware modules like file and copy report ok on repeat runs.</p>
+<p><strong>Q162.</strong> Which task is idempotent?</p>
+<p><strong>Answer:</strong> ansible.builtin.file: {path: /etc/app, state: directory, mode: '0755'}</p>
+<p>mkdir fails when it exists, and &gt;&gt; appends duplicates.</p>
+<p><strong>Q163.</strong> On a repeat run of a converged playbook, what should the recap show?</p>
+<p><strong>Answer:</strong> changed=0</p>
+<p>The recap is the instrument.</p>
+<p><strong>Q164.</strong> <code>http_port</code> is 80 in [web:vars], 8081 on host web1, and web1 runs with <code>-e http_port=9000</code>. Which wins for web1?</p>
+<p><strong>Answer:</strong> 9000: extra vars beat everything</p>
+<p>Host beats group and extra vars beat both (measured precedence).</p>
+<p><strong>Q165.</strong> A role's defaults/main.yml sets webapp_port: 8080 and a play passes webapp_port: 9000 as a role parameter. What happens?</p>
+<p><strong>Answer:</strong> The role parameter overrides the default, since defaults have the lowest precedence</p>
+<p>defaults are the role's public interface.</p>
+<p><strong>Q166.</strong> <code>servers | selectattr('port','gt',100) | map(attribute='name') | list</code> with ports 80, 8080, 443 (names a, b, c) returns:</p>
+<p><strong>Answer:</strong> [b, c]</p>
+<p>Ports above 100: 8080 and 443.</p>
+<p><strong>Q167.</strong> Shallow versus recursive combine of {a:1, b:{c:2, d:3}} with {b:{c:9}, e:5}.</p>
+<p><strong>Answer:</strong> Shallow: {a:1, b:{c:9}, e:5}; recursive=True: {a:1, b:{c:9, d:3}, e:5}</p>
+<p>A plain combine replaces whole values for matching keys.</p>
+<p><strong>Q168.</strong> A handler is notified by three tasks that each changed. How often does it run?</p>
+<p><strong>Answer:</strong> Once, at the end of the play</p>
+<p>Handlers fire once per play unless flushed.</p>
+<p><strong>Q169.</strong> A task with <code>when: ansible_facts.os_family == 'Debian'</code> runs on macOS. What's reported?</p>
+<p><strong>Answer:</strong> skipping: not counted as changed (os_family is Darwin)</p>
+<p>Skipped tasks aren't changed.</p>
+<p><strong>Q170.</strong> Which structure runs a health check and rolls back on failure but always cleans up?</p>
+<p><strong>Answer:</strong> block with rescue (rollback) and always (cleanup)</p>
+<p>Rescue runs only when the block fails; always runs regardless.</p>
+<p><strong>Q171.</strong> What does <code>serial: [1, "50%", "100%"]</code> produce on eight hosts?</p>
+<p><strong>Answer:</strong> Batches of 1, 4 and 3: a canary, then half, then the rest</p>
+<p>Verified by arithmetic: 1, then 50% of 8 = 4, then the remaining 3.</p>
+<p><strong>Q172.</strong> An 'UNREACHABLE' error indicates what, and what's the first step?</p>
+<p><strong>Answer:</strong> A connection problem (SSH, host key, network or interpreter); use -vvv and try ssh by hand</p>
+<p>FAILED with rc= means the command ran and failed.</p>
+<p><strong>Q173.</strong> <code>command: echo {{ user_input }}</code> is run with user_input 'ok; rm -rf x' under shell. How do you make it safe?</p>
+<p><strong>Answer:</strong> Use <code>{{ user_input | quote }}</code> (or avoid shell and pass argv)</p>
+<p>The variable text is pasted into the shell line.</p>
+<p><strong>Q174.</strong> A task removed from the playbook leaves its file on every host. Why?</p>
+<p><strong>Answer:</strong> Ansible keeps no state: it has no record it created the file, so add an explicit state: absent task or an allow-list purge</p>
+<p>Terraform would destroy it; Ansible won't.</p>
+<p><strong>Q175.</strong> Which command encrypts a secrets file, and what does the file start with?</p>
+<p><strong>Answer:</strong> ansible-vault encrypt secrets.yml, starting $ANSIBLE_VAULT;1.1;AES256</p>
+<p>Encrypting twice gives different ciphertext.</p>
+<p><strong>Q176.</strong> How do you restrict a run to one task group on one host?</p>
+<p><strong>Answer:</strong> --tags &lt;tag&gt; with --limit &lt;host&gt; (tasks tagged always still run)</p>
+<p>Combine with --check to preview.</p>
+<p><strong>Q177.</strong> A scheduled pipeline must show whether any host has drifted without changing anything. What do you run?</p>
+<p><strong>Answer:</strong> The playbook with --check --diff, reporting changed tasks (exit non-zero on drift)</p>
+<p>Check mode is the drift audit.</p>
+<p><strong>Q178.</strong> A second CI run of a new playbook reports changed=1 because a task writes the current time into a file. What does the pipeline do?</p>
+<p><strong>Answer:</strong> Fail the idempotence step, since the task would flap on every run in production</p>
+<p>Idempotence is a CI gate.</p>
+<p><strong>Q179.</strong> Which tool owns creating VMs and load balancers, and which owns OS config and deployment steps?</p>
+<p><strong>Answer:</strong> Terraform owns infrastructure; Ansible owns on-host config and orchestration</p>
+<p>Pick one owner per resource.</p>
+<h2 id="practical-coding-questions">Practical coding questions<a class="headerlink" href="#practical-coding-questions" title="Permanent link">&para;</a></h2>
+<h3 id="render-a-config-template">Render a config template<a class="headerlink" href="#render-a-config-template" title="Permanent link">&para;</a></h3>
+<p>Write the Jinja2 template that renders an nginx-style server block: a managed-by header, listen port, server_name (appending .example.com only when env is 'production') and one comment line per upstream with loop.index, name and weight defaulting to 1. Print the staging render, then the production server_name line. (Needs Jinja2: pip install jinja2.)</p>
+<p>Starter code:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>from jinja2 import Environment
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>env = Environment(trim_blocks=True, lstrip_blocks=True)
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>TEMPLATE = """# TODO: write the Jinja2 template: managed-by header, listen port,
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a># server_name (add .example.com when env == 'production'), and one comment per upstream
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a># with loop.index, name and weight (default 1)
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>"""
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>vars_ = {"http_port": 8081, "inventory_hostname": "web1", "env": "staging",
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>         "upstreams": [{"name": "a", "weight": 3}, {"name": "b"}]}
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>print(env.from_string(TEMPLATE).render(**vars_))
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>vars_["env"] = "production"
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>print(env.from_string(TEMPLATE).render(**vars_).splitlines()[3])
+</code></pre></div>
+<p>Expected output:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># managed by Ansible - do not edit by hand
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>server {
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    listen 8081;
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    server_name web1;
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    # upstream 1: a weight=3
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    # upstream 2: b weight=1
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>}
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    server_name web1.example.com;
+</code></pre></div>
+<p>??? success "Show a solution"</p>
+<div class="highlight"><pre><span></span><code>```
+from jinja2 import Environment
+env = Environment(trim_blocks=True, lstrip_blocks=True)
+TEMPLATE = """# managed by Ansible - do not edit by hand
+server {
+    listen {{ http_port }};
+    server_name {{ inventory_hostname }}{% if env == 'production' %}.example.com{% endif %};
+{% for u in upstreams %}
+    # upstream {{ loop.index }}: {{ u.name }} weight={{ u.weight | default(1) }}
+{% endfor %}
+}
+"""
+vars_ = {"http_port": 8081, "inventory_hostname": "web1", "env": "staging",
+         "upstreams": [{"name": "a", "weight": 3}, {"name": "b"}]}
+print(env.from_string(TEMPLATE).render(**vars_))
+vars_["env"] = "production"
+print(env.from_string(TEMPLATE).render(**vars_).splitlines()[3])
+```
+
+Ansible's template module uses Jinja2, so {{ }} prints values, {% if %} and {% for %} control flow, and the default filter handles optional weights. Verified by running the solution with Jinja2.
+</code></pre></div>
+<h3 id="a-dynamic-inventory">A dynamic inventory<a class="headerlink" href="#a-dynamic-inventory" title="Permanent link">&para;</a></h3>
+<p>Write build(text) that turns the CMDB CSV into an Ansible dynamic-inventory structure: _meta hostvars (ansible_host and an integer http_port per host), and every host joins two groups, its role and its env. Print each group's hosts and one host's variables.</p>
+<p>Starter code:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>import csv, io, json
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>CSV = """name,address,role,env,port
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>web-01,10.0.1.11,web,prod,8080
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>web-02,10.0.1.12,web,prod,8080
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>db-01,10.0.2.21,db,prod,5432
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>web-stg,10.1.1.11,web,staging,8081
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>"""
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>def build(text):
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    # return {"_meta": {"hostvars": {name: {ansible_host, http_port(int)}}}, "all": {...}, "&lt;group&gt;": {"hosts": [...]}}
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    # every row joins two groups: its role and its env
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    pass
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>inv = build(CSV)
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>for g in ("web", "prod", "db", "staging"):
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>    print(f"{g}: {', '.join(inv[g]['hosts'])}")
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>print(json.dumps(inv["_meta"]["hostvars"]["web-01"], sort_keys=True))
+</code></pre></div>
+<p>Expected output:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>web: web-01, web-02, web-stg
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>prod: web-01, web-02, db-01
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>db: db-01
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>staging: web-stg
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>{"ansible_host": "10.0.1.11", "http_port": 8080}
+</code></pre></div>
+<p>??? success "Show a solution"</p>
+<div class="highlight"><pre><span></span><code>```
+import csv, io, json
+
+CSV = """name,address,role,env,port
+web-01,10.0.1.11,web,prod,8080
+web-02,10.0.1.12,web,prod,8080
+db-01,10.0.2.21,db,prod,5432
+web-stg,10.1.1.11,web,staging,8081
+"""
+
+def build(text):
+    inv = {"_meta": {"hostvars": {}}, "all": {"children": ["ungrouped"]}}
+    for row in csv.DictReader(io.StringIO(text)):
+        inv["_meta"]["hostvars"][row["name"]] = {"ansible_host": row["address"], "http_port": int(row["port"])}
+        for g in (row["role"], row["env"]):
+            inv.setdefault(g, {"hosts": []})["hosts"].append(row["name"])
+    return inv
+
+inv = build(CSV)
+for g in ("web", "prod", "db", "staging"):
+    print(f"{g}: {', '.join(inv[g]['hosts'])}")
+print(json.dumps(inv["_meta"]["hostvars"]["web-01"], sort_keys=True))
+```
+
+An inventory script prints JSON with _meta so Ansible needn't call --host for every host. A source of truth like a CMDB avoids the rot of hand-edited files. Verified by running the solution.
+</code></pre></div>
+<hr />
+<p>More free practice: the <a href="../">Ansible Mastery Path</a> curriculum, the <a href="https://learnmasterypath.com/interview-pack/">Interview Prep Pack</a> and the <a href="https://learnmasterypath.com/resume/">free resume ATS check</a>.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+  
+  <nav class="mp-related" aria-label="Related free courses">
+    <h2>Related free courses</h2>
+    <ul>
+      <li><a href="https://learnmasterypath.com/server-ops-mastery-path/">Server Ops</a></li><li><a href="https://learnmasterypath.com/linux-mastery-path/">Linux</a></li><li><a href="https://learnmasterypath.com/nodemcu-mastery-path/">NodeMCU/IoT</a></li><li><a href="https://learnmasterypath.com/terraform-mastery-path/">Terraform</a></li><li><a href="https://learnmasterypath.com/kubernetes-mastery-path/">Kubernetes</a></li>
+      <li><a href="https://learnmasterypath.com/">All 100+ courses &rarr;</a></li>
+    </ul>
+  </nav>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../cheat-sheet/" class="md-footer__link md-footer__link--next" aria-label="Next: Cheat Sheet">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Cheat Sheet
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+  <div class="mp-foot">
+    <div class="mp-foot-inner">
+      <a class="mp-foot-brand" href="https://learnmasterypath.com/"><svg class="mp-mark" viewBox="0 0 160 160" role="img" aria-label="Mastery Path logo">
+  <circle cx="80" cy="80" r="74" fill="#FAF7EF" stroke="#2FA98D" stroke-width="5"/>
+  <rect class="mp-bar mp-bar-1" x="36" y="90" width="17" height="24" rx="5" fill="#2FA98D"/>
+  <rect class="mp-bar mp-bar-2" x="59" y="74" width="17" height="40" rx="5" fill="#7FC9B7"/>
+  <rect class="mp-bar mp-bar-3" x="82" y="56" width="17" height="58" rx="5" fill="#E0B457"/>
+  <rect class="mp-bar mp-bar-4" x="105" y="38" width="17" height="76" rx="5" fill="#C97B4A"/>
+  <circle class="mp-dot" cx="44.5" cy="82" r="7" fill="#22261f"/>
+</svg><span>Mastery Path</span></a>
+      <nav class="mp-sitelinks" aria-label="Site and legal links">
+        <a href="https://learnmasterypath.com/">All courses</a>
+        <a href="https://learnmasterypath.com/about.html">About</a>
+        <a href="https://learnmasterypath.com/contact.html">Contact</a>
+        <a href="https://learnmasterypath.com/ansible-mastery-path/privacy/">Privacy Policy</a>
+        <a href="https://learnmasterypath.com/terms.html">Terms</a>
+        <a href="https://learnmasterypath.com/ansible-mastery-path/license/">License</a>
+        <a href="https://learnmasterypath.com/verify/">Verify a certificate</a>
+      </nav>
+    </div>
+    <p class="mp-license-note">
+      © 2026 Vinod Kumar Sigilipelli · Except where otherwise noted, lesson content is licensed under
+      <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> and code examples under the
+      <a href="https://opensource.org/license/mit">MIT License</a>.
+    </p>
+  </div>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.path", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.indexes", "toc.follow", "content.code.copy", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../javascripts/progress-tracker.js"></script>
+      
+        <script src="../javascripts/final-quiz.js"></script>
+      
+    
+  </body>
+</html>
