@@ -1,6 +1,6 @@
 ---
 title: "Free Ansible Course: Inventory, Playbooks, Idempotency, Roles, Vault, Custom Modules, Rolling Updates and Operating Automation"
-description: "Free Ansible course: 36 lessons and 4 projects on inventory, playbooks, idempotency, roles, Vault, custom modules, rolling updates, drift audits and fleet operations."
+description: "Free Ansible course: 36 lessons, 3 projects and 1 capstone on inventory, playbooks, idempotency, roles, Vault, custom modules, rolling updates, drift audits and fleet operations."
 ---
 
 # Ansible Mastery Path
@@ -31,7 +31,7 @@ Every lesson has a **How It Actually Works** section: why a second run is the be
 | **3 · Extending Ansible** | Modules, plugins, dynamic inventory, async, performance, rolling updates, drift | 10 | Extend Ansible and roll out changes safely |
 | **4 · Operating Ansible** | Controllers, CI, secrets, pull mode, Terraform, audits, incidents, governance | 10 | Run automation as a team service |
 
-Each level has 9 teaching modules plus a hands-on project (module 10), which makes **36 lessons and 4 projects** in total.
+Each level has 9 teaching modules plus a hands-on project (module 10), which makes **36 lessons, 3 projects and 1 capstone** in total.
 
 ## How to use this site
 
